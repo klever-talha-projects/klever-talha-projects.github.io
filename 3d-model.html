@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+  
+  .scene,
+  canvas {
+    width: 100vw;
+    height: 100vh;
+
+  }
+    </style>
+</head>
+<body>
+        <div class="scene" oncontextmenu="return false;"></div>
+
+    <script type="module">
+        import * as THREE from 'https://cdn.skypack.dev/three@0.133.1';
+import {GLTFLoader} from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/loaders/GLTFLoader.js';
+import {OrbitControls} from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls.js';
+
+const container = document.querySelector('.scene');
+
+const scene = new THREE.Scene();
+
+//  camera
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 1, 1000);
+camera.position.set(0, 0, 800);
+
+// renderer
+const renderer = new THREE.WebGLRenderer({
+   alpha: true,
+   antialias: true
+});
+renderer.setSize(container.clientWidth, container.clientHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.outputEncoding = THREE.sRGBEncoding
+container.appendChild(renderer.domElement);
+
+
+
+// OrbitControls
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.rotateSpeed = 0.09;
+controls.enableZoom = true;
+controls.enablePan = false;
+
+
+// GLTFLoader
+const loader = new GLTFLoader();
+loader.load("untitled.glb", function (gltf) {
+   scene.add(gltf.scene);
+});
+
+// Lights
+
+const light = new THREE.AmbientLight( 0x222222, 1 ); // soft white light
+scene.add( light );
+
+const spotLight = new THREE.SpotLight( 0xffffff );
+spotLight.position.set( 1000, 100, 0 );
+scene.add( spotLight );
+
+const spotLight1 = new THREE.SpotLight( 0xffffff );
+spotLight1.position.set( -130, -86, 1000 );
+scene.add( spotLight1 );
+
+const spotLight2 = new THREE.SpotLight( 0xffffff );
+spotLight2.position.set( -570, -25, -1000 );
+spotLight2.castShadow = false;
+scene.add( spotLight2 );
+
+// const spotLight = new THREE.SpotLight( 0xffffff );
+// spotLight.position.set( 1000, 100, 0 );
+// spotLight.castShadow = false;
+// scene.add( spotLight );
+
+function animate() {
+   requestAnimationFrame(animate);
+   renderer.render(scene, camera);
+}
+
+animate();
+    </script>
+</body>
+</html>
