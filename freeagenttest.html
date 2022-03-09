@@ -1186,7 +1186,7 @@ margin-left: 5%;
         </div>
     </div>
     <div class="display">
-        <img src="Graphic.png" alt="">
+        <img src="graphic.png" alt="">
     </div>
   </div>
    
@@ -1285,6 +1285,41 @@ margin-left: 5%;
 <script>
 
 </script>
+var faqSection = document.querySelectorAll(".faq-section");
+var faqActive = document.querySelectorAll(".faq-answer");
+
+for(let i = 0; i<faqSection.length; i++){
+    faqSection[i].addEventListener("click", ()=>{
+    removePreviousActive()
+    if(faqSection[i].classList.contains("active")){
+        removePreviousActive()} else{
+            faqActive[i].classList.add('active')
+        }
+    
+    })
+}
+
+
+function removePreviousActive(){
+        for(let i = 0; i<faqSection.length; i++){
+        faqActive[i].classList.remove('active')}
+};
+
+
+let loadUp = document.querySelector(".load-up");
+let blurBack = document.querySelector(".blur-back");
+let loadUpClose = document.querySelector(".close");
+
+
+window.onload = function(){
+    loadUp.style.display = "flex";
+    blurBack.style.filter = "blur(8px)";
+};
+
+loadUpClose.addEventListener("click", function(){
+    loadUp.style.display = "none";
+    blurBack.style.filter = "blur(0px)";
+})
 
 
 </html>
