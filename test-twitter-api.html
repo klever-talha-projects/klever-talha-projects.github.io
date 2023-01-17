@@ -11,7 +11,8 @@
   <p>hello<p/>
   
   <script>
-    var data = JSON.stringify({
+// WARNING: For GET requests, body is set to null by browsers.
+var data = JSON.stringify({
     query: "",
     variables: {}
   });
@@ -25,14 +26,13 @@
     }
   });
   
-  xhr.open("GET", "https://api.twitter.com/2/users/333357345/tweets");
+  xhr.open("GET", "https://api.twitter.com/2/users/333357345");
   xhr.setRequestHeader("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAC2xQAEAAAAAAqseg8bIBQbhd0PNkc7KVwfZfjs%3DmEKLvKkymOUcul28uNWCjzeP5TTnLRhsm65MTVzWBB7E58A4jh");
   xhr.setRequestHeader("Content-Type", "application/json");
   // WARNING: Cookies will be stripped away by the browser before sending the request.
   xhr.setRequestHeader("Cookie", "guest_id=v1%3A167351544975069586; guest_id_ads=v1%3A167351544975069586; guest_id_marketing=v1%3A167351544975069586; personalization_id=\"v1_wnisiJE47jisZk7QcjXgNg==\"");
   
   xhr.send(data);
-      Consol.log(data)
   </script>
 </body>
 </html>
