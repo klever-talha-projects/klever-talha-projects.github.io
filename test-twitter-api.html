@@ -11,24 +11,27 @@
   <p>hello<p/>
   
   <script>
-    var url = "https://api.twitter.com/2/users/333357345";
-
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url);
-    
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.setRequestHeader("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAC2xQAEAAAAAAqseg8bIBQbhd0PNkc7KVwfZfjs%3DmEKLvKkymOUcul28uNWCjzeP5TTnLRhsm65MTVzWBB7E58A4jh");
-    xhr.setRequestHeader("Accept", "*/*");
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-    
-
-    xhr.onreadystatechange = function () {
-       if (xhr.readyState === 4) {
-          console.log(xhr.status);
-          console.log(xhr.responseText);
-       }};
-    
-    xhr.send();
+    var data = JSON.stringify({
+    query: "",
+    variables: {}
+  });
+  
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+  
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText);
+    }
+  });
+  
+  xhr.open("GET", "https://api.twitter.com/2/users/333357345/tweets");
+  xhr.setRequestHeader("Authorization", "Bearer AAAAAAAAAAAAAAAAAAAAAC2xQAEAAAAAAqseg8bIBQbhd0PNkc7KVwfZfjs%3DmEKLvKkymOUcul28uNWCjzeP5TTnLRhsm65MTVzWBB7E58A4jh");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  // WARNING: Cookies will be stripped away by the browser before sending the request.
+  xhr.setRequestHeader("Cookie", "guest_id=v1%3A167351544975069586; guest_id_ads=v1%3A167351544975069586; guest_id_marketing=v1%3A167351544975069586; personalization_id=\"v1_wnisiJE47jisZk7QcjXgNg==\"");
+  
+  xhr.send(data);
   </script>
 </body>
 </html>
