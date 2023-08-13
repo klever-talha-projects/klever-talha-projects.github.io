@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: vag-rounded-bt;
+            src: url(VAGRoundedBT-Regular.otf);
+        }
+
+        .applet {
+            width: 266px;
+            height: 660px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .product {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 188px;
+            height: 292px;
+            
+        }
+        .product>img{
+            width: 100%;
+            object-fit: contain;
+            align-self: flex-start;
+        }
+
+        .text-box {
+            position: absolute;
+            top: 70px;
+            left: 32px;
+            width: 146px;
+        }
+
+        p {
+            font-family: vag-rounded-bt;
+            color: aliceblue;
+        }
+
+        .heading {
+            width: 146px;
+            margin-bottom: 3px;
+        }
+
+        .heading-txt {
+            font-size: 25px;
+            color: #E30613;
+            -webkit-text-stroke: #FFFFFF 0.5px;
+        }
+
+        .sub-heading {
+            width: 150px;
+            margin-bottom: 3px;
+        }
+
+        .sub-heading-txt {
+            font-size: 25px;
+            line-height: 28px;
+            -webkit-text-stroke: #0066B3 0.8px;
+        }
+
+        .tag {
+            width: 146px;
+            height: 15px;
+        }
+
+        .tag-txt {
+            font-size: 12px;
+            white-space: nowrap;
+            -webkit-text-stroke: #0066B3 0.5px;
+        }
+
+        .price {
+            display: flex;
+            width: 120px;
+            margin-top: -10px;
+        }
+
+        .price-txt {
+            font-size: 50px;
+            margin-right: 5px;
+            -webkit-text-stroke: #0066B3 1px;
+        }
+
+        .currency-txt {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            -webkit-text-stroke: #0066B3 1px;
+        }
+
+        .desc {
+            width: 146px;
+            height: 43px;
+        }
+
+        .desc-txt {
+            font-size: 12px;
+            white-space: nowrap;
+            -webkit-text-stroke: #0066B3 0.5px;
+        }
+
+        .cartoon-img {
+            position: absolute;
+    z-index: 999;
+    bottom: 1.8%;
+    right: 3%;
+    height: 250px;
+    object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="applet">
+        <div class="text-box">
+            <div class="heading">
+                <p data-editable="text" class="heading-txt">Angebot</p>
+            </div>
+            <div class="sub-heading">
+                <p data-editable="text" class="sub-heading-txt">Surf Trip und
+                    Coole Kiste
+                    </p>
+            </div>
+            <div class="tag">
+                <p data-editable="text" class="tag-txt">Nur Für</p>
+            </div>
+            <div class="price">
+                <p data-editable="text" class="price-txt">0,75</p>
+                <p data-editable="text" class="currency-txt">€</p>
+            </div>
+            <div class="desc">
+                <p data-editable="text" class="desc-txt">175g-Beutel | kg 4,51€</p>
+            </div>
+        </div>
+        <img src="cartoon.png" class="cartoon-img" data-editable="src">
+        <div class="product">
+            <img src="product.png" data-editable="src">
+        </div>
+
+        <img src="bg.png" class="bg-img" data-editable="src">
+    </div>
+</body>
+<script src="./jquery.js"></script>
+<script src="./jquery.fit_font.js"></script>
+<script>
+    $(function () {
+        $('heading-txt').fit_font({
+            multiline: false,
+            max: 25,
+            min: 1,
+            width: 160,
+        });
+        $('.sub-heading-txt').fit_font({
+            multiline: true,
+            max: 25,
+            min: 1,
+            width: 160,
+            height: 57
+        });
+        $('.tag-txt').fit_font({
+            multiline: false,
+            max: 12,
+            min: 1,
+            width: 146,
+        });
+        $('.price-txt').fit_font({
+            multiline: false,
+            max: 50,
+            min: 1,
+            width: 93,
+        });
+        $('.desc-txt').fit_font({
+            multiline: false,
+            max: 12,
+            min: 1,
+            width: 146,
+        });
+    });
+</script>
+<script>
+    // Wait for 0.1 second after document load
+    setTimeout(() => {
+        // Get the elements
+        const priceText = document.querySelector('.price-txt');
+        const currencyText = document.querySelector('.currency-txt');
+
+        // Get the font size of the price text
+        const priceFontSize = parseFloat(window.getComputedStyle(priceText).fontSize);
+
+        // Calculate the new font size for the currency text
+        const newCurrencyFontSize = priceFontSize * 0.65; // 45% reduction
+
+        // Apply the new font size to the currency text
+        currencyText.style.fontSize = `${newCurrencyFontSize}px`;
+    }, 500);
+</script>
+
+</html>
