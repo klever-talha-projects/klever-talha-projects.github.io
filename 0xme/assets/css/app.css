@@ -2329,7 +2329,7 @@ a {
 
 @media only screen and (max-width: 1024px) {
   .create {
-    padding: 0 0 100px;
+    padding: 100px 0 100px;
   }
 }
 
