@@ -105,7 +105,7 @@
             if (nav.length) {
                 var offsetTop = nav.offset().top,
                 headerHeight = nav.height(),
-                injectSpace = $('<div />', {
+                injectSpace = $('<div style="display:none"/>', {
                     height: headerHeight
                 }).insertAfter(nav);
                 $(window).on('load scroll', function () {
