@@ -376,7 +376,7 @@
             const target = $(this).attr("href");
             const offset = 100; // Adjust this value as needed
             $("html, body").animate({
-                scrollTop: $(target).offset().top - offset
+                scrollTop: $("#"+target).offset().top - offset
             }, 800); // Adjust the scroll speed as needed
         });
     });
