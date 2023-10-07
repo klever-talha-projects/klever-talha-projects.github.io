@@ -1998,7 +1998,7 @@ a {
 }
 
 .speciality {
-  padding: 100px 0 171px;
+  padding: 0px 0 171px;
   position: relative;
 }
 
@@ -2199,15 +2199,72 @@ a {
   opacity: 1;
 }
 
+.portfolio {
+  position: relative;
+  padding: 0 0 150px;
+}
+.portfolio .container {
+  max-width: 1140px;
+}
+.portfolio .block-text .heading {
+  margin-bottom: 38px;
+}
+.portfolio__right>div{
+  display: flex;
+  justify-content: center;
+}
+.portfolio .portfolio__right .image {
+  animation: animate-1 15s linear 0s infinite;
+}
+@media only screen and (max-width: 767px) {
+  .portfolio .portfolio__right .image {
+    width: 100%;
+  }
+  .portfolio .portfolio__right .image img {
+    width: 80%;
+  }
+}
+
+.portfolio-box {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 73.86%);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  position: relative;
+  padding: 40px 23px;
+  display: flex;
+  margin-bottom: 19px;
+}
+.portfolio-box .step {
+  background: linear-gradient(89.96deg, rgba(255, 255, 255, 0.05) 0.03%, rgba(255, 255, 255, 0.008) 49.67%, rgba(255, 255, 255, 0.05) 99.96%);
+  backdrop-filter: blur(4px);
+  border-radius: 100px;
+  position: absolute;
+  top: -15px;
+  left: 22px;
+  padding: 6px 16px;
+  background: linear-gradient(264.28deg, #DEC7FF -38.2%, #5C27FE 103.12%), #FFFFFF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  font-size: 12px;
+  font-family: "Conthrax";
+}
+.portfolio-box .icon {
+  margin-right: 17px;
+}
+.portfolio-box .content {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 16px;
+}
+.portfolio-box .content .title {
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
 .faq {
   position: relative;
   padding: 0px 0 129px;
-}
-
-@media only screen and (max-width: 1024px) {
-  .faq {
-    padding: 0;
-  }
 }
 
 .faq.s3 {
@@ -2329,7 +2386,7 @@ a {
 
 @media only screen and (max-width: 1024px) {
   .create {
-    padding: 100px 0 100px;
+    padding: 0 0 100px;
   }
 }
 
@@ -2369,6 +2426,32 @@ a {
   right: 17px;
   top: -112px;
   animation: animate-1 15s linear 0s infinite;
+}
+
+
+.about.s2 {
+  padding: 0 0 150px;
+}
+.about.s2 .shape {
+  top: -30%;
+}
+.about.s2 .shape.right {
+  top: -60%;
+}
+.about.s2 .about__main img {
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 1200px) {
+  .about.s2 .about__main img {
+    width: 100%;
+  }
+}
+.about.s2 .block-text .heading {
+  margin-bottom: 38px;
+}
+.about.s2 .action-btn span {
+  padding: 15px 24px;
+
 }
 
 .touch__main {
