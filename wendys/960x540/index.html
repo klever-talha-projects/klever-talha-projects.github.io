@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: Intro-Black;
+            src: url(Intro-Black.ttf);
+        }
+        @font-face {
+            font-family: Intro-Black-Italic;
+            src: url(Intro-Black-Italic.ttf);
+        }
+        @font-face {
+            font-family: Intro-Inline;
+            src: url("Intro-Inline.otf");
+        }
+        @font-face {
+            font-family: Intro-Cond-Black-Free;
+            src: url("Intro-Cond-Black-Caps.ttf");
+        }
+        @font-face {
+            font-family: Futura-CondensedLight;
+            src: url("Futura-CondensedLight.otf");
+        }
+        @font-face {
+            font-family: futura-pt-cond-bold;
+            src: url("futura-pt-cond-bold.otf");
+        }
+        @font-face {
+            font-family: Intro-Cond-Regular;
+            src: url("Intro-Cond-Regular.ttf");
+        }
+        @font-face {
+            font-family: Helvetica Medium Condensed;
+            src: url("Helvetica Medium Condensed.otf");
+        }
+        @font-face {
+            font-family: Intro-Cond-SemiBold;
+            src: url("Intro-Cond-SemiBold.ttf");
+        }
+        .board{
+            width: 1920px;
+            height: 1080px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+        }
+        .divider{
+            width: 5.6px;
+            height: 1080px;
+            background-color: #e6e7e8;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+        .top-red{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+        }
+        .bottom-red{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 3;
+        }
+        .page-1-title{
+            font-family: Intro-Black;
+            color: rgb(255, 255, 255);   
+            position: absolute;
+            width: 960px;
+            height: 112px;
+            text-align: center;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+        }
+        .page-2-title{
+            font-family: Intro-Black;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            left: 50%;
+            width: 960px;
+            height: 112px;
+            text-align: center;
+            z-index: 4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .section{
+            font-family: Intro-Black-Italic;
+            color: #85878a;
+            position: absolute;
+            z-index: 4;
+            width: 900px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .section-1{
+            top: 14.2%;
+            left: 1.2%;
+        }
+        .section-2{
+            top: 48%;
+            left: 1.2%;
+        }
+        .section-3{
+            top: 14.2%;
+            left: 51.2%;
+        }
+        .section-4{
+            top: 62%;
+            left: 51.2%;
+        }
+        .section-title{
+            position: absolute;
+            z-index: 5;
+            background-color: rgb(255, 255, 255);
+            padding: 0 8px;
+        }
+        .section-line{
+            position: absolute;
+            width: 100%;
+        }
+        .section-1-content{
+            position: absolute;
+            z-index: 5;
+            top: 16%;
+            left: 1.2%;
+            display: flex;
+            height: 140px;
+        }
+        .section-1-content-2{
+            position: absolute;
+            z-index: 5;
+            top: 33%;
+            left: 1.2%;
+            display: flex;
+            height: 140px;
+        }
+        .section-2-content{
+            position: absolute;
+            z-index: 5;
+            top: 47%;
+            left: 1.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-2-content-1{
+            position: absolute;
+            z-index: 5;
+            top: 57%;
+            left: 1.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-2-content-2{
+            position: absolute;
+            z-index: 5;
+            top: 67%;
+            left: 1.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-2-content-3{
+            position: absolute;
+            z-index: 5;
+            top: 77%;
+            left: 1.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-3-content{
+            position: absolute;
+            z-index: 5;
+            top: 16%;
+            left: 51.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-3-content-1{
+            position: absolute;
+            z-index: 5;
+            top: 30%;
+            left: 51.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-3-content-2{
+            position: absolute;
+            z-index: 5;
+            top: 45%;
+            left: 51.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-3-content-3{
+            position: absolute;
+            z-index: 5;
+            top: 63%;
+            left: 51.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .section-3-content-4{
+            position: absolute;
+            z-index: 5;
+            top: 76%;
+            left: 51.2%;
+            display: flex;
+            align-items: center;
+            height: 140px;
+        }
+        .number{
+            font-family: Intro-Inline;
+            font-size: 120px;
+            color: #db163a;
+        }
+        .section-2-content>.number{
+            font-family: Intro-Inline;
+            font-size: 92px;
+            color: #db163a;
+        }
+        .section-2-content-1>.number{
+            font-family: Intro-Inline;
+            font-size: 92px;
+            color: #db163a;
+        }
+        .section-2-content-2>.number{
+            font-family: Intro-Inline;
+            font-size: 92px;
+            color: #db163a;
+        }
+        .section-2-content-3>.number{
+            font-family: Intro-Inline;
+            font-size: 92px;
+            color: #db163a;
+        }
+        .section-3-content>.number{
+            font-family: Intro-Inline;
+            font-size: 88px;
+            color: #db163a;
+        }
+        .section-3-content-1>.number{
+            font-family: Intro-Inline;
+            font-size: 88px;
+            color: #db163a;
+        }
+        .section-3-content-2>.number{
+            font-family: Intro-Inline;
+            font-size: 88px;
+            color: #db163a;
+        }
+        .section-3-content-3>.number{
+            font-family: Intro-Inline;
+            font-size: 88px;
+            color: #db163a;
+        }
+        .section-3-content-4>.number{
+            font-family: Intro-Inline;
+            font-size: 88px;
+            color: #db163a;
+        }
+        .picture{
+            width: 200px;
+            height: 150px;
+            object-fit: contain;
+        }
+        .section-2-content>.picture{
+            width: 180px;
+        }
+        .section-2-content-1>.picture{
+            width: 180px;
+        }
+        .section-2-content-2>.picture{
+            width: 180px;
+        }
+        .section-2-content-3>.picture{
+            width: 180px;
+        }
+        .section-3-content>.picture{
+            width: 180px;
+        }
+        .section-3-content-1>.picture{
+            width: 180px;
+        }
+        .section-3-content-2>.picture{
+            width: 180px;
+        }
+        .section-3-content-3>.picture{
+            width: 180px;
+        }
+        .section-3-content-4>.picture{
+            width: 180px;
+        }
+        .catagories{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            transform: translateY(25%);
+        }
+        .section-1-content-2>.catagories{
+            width: 405px;
+        }
+        .section-2-content>.catagories{
+            width: 435px;
+        }
+        .section-2-content-1>.catagories{
+            width: 435px;
+        }
+        .section-2-content-2>.catagories{
+            width: 435px;
+        }
+        .section-2-content-3>.catagories{
+            width: 435px;
+        }
+        .section-3-content>.catagories{
+            width: 430px;
+        }
+        .section-3-content-1>.catagories{
+            width: 430px;
+        }
+        .section-3-content-2>.catagories{
+            width: 430px;
+        }
+        .section-3-content-3>.catagories{
+            width: 395px;
+        }
+        .section-3-content-4>.catagories{
+            width: 412px;
+        }
+        .catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 33px;
+            color: #db163a;
+            line-height: 35px;
+        }
+        .section-1-content-2>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 47px;
+            color: #db163a;
+        }
+        .section-2-content>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 42px;
+            color: #db163a;
+        }
+        .section-2-content-1>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 42px;
+            color: #db163a;
+        }
+        .section-2-content-2>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 42px;
+            color: #db163a;
+        }
+        .section-2-content-3>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 42px;
+            color: #db163a;
+        }
+        .section-3-content>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 40px;
+            width: 435px;
+            color: #db163a;
+        }
+        .section-3-content-1>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 40px;
+            width: 435px;
+            color: #db163a;
+        }
+        .section-3-content-2>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 40px;
+            width: 435px;
+            color: #db163a;
+        }
+        .section-3-content-3>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 40px;
+            width: 435px;
+            color: #db163a;
+        }
+        .section-3-content-4>.catagories>p{
+            font-family: Intro-Cond-Black-Free;
+            font-size: 40px;
+            width: 435px;
+            color: #db163a;
+        }
+        .pricing{
+            width: 200px;
+            transform: translateY(25%);
+        }
+        .section-1-content-2>.pricing{
+            width: 120px;
+            transform: translateY(28%);
+        }
+        .section-2-content>.pricing{
+            width: 215px;
+            transform: translateY(20%);
+        }
+        .section-2-content-1>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-2-content-2>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-2-content-3>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-1>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-2>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-3>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-4>.pricing{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .pricing>div{
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-1-content-2>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-2-content>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -5px;
+            align-items: flex-end;
+        }
+        .section-2-content-1>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-2-content-2>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-2-content-3>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-3-content>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-3-content-1>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-3-content-2>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-3-content-3>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .section-3-content-4>.pricing>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px;
+        }
+        .pricing-2{
+            width: 200px;
+            transform: translateY(25%);
+        }
+        .section-1-content>.pricing-2{
+            width: 200px;
+            transform: translateY(25%);
+            margin-left: 20px;
+        }
+        .section-1-content-2>.pricing-2{
+            width: 120px;
+            transform: translateY(28%);
+        }
+        .section-2-content>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-2-content-1>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-2-content-2>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-2-content-3>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-1>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-2>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-3>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .section-3-content-4>.pricing-2{
+            width: 120px;
+            transform: translateY(25%);
+        }
+        .pricing-2>div{
+            display: flex;
+            align-items: center;
+            display: flex;
+            margin-bottom: -5px
+        }
+        .section-1-content-2>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-2-content>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-2-content-1>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-2-content-2>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-2-content-3>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-3-content>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-3-content-1>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-3-content-2>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-3-content-3>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .section-3-content-4>.pricing-2>div{
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: center;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            margin-bottom: -5px
+        }
+        .type{
+            display: flex;
+            width: 250px;
+            justify-content: space-between;
+            position: absolute;
+            top: 17%;
+            left: 29%;
+            z-index: 5;
+        }
+        .type-2{
+            display: flex;
+            width: 180px;
+            justify-content: space-between;
+            position: absolute;
+            top: 35%;
+            left: 37%;
+            z-index: 5;
+        }
+        .type-3{
+            display: flex;
+            width: 180px;
+            justify-content: space-between;
+            position: absolute;
+            top: 18%;
+            left: 86.5%;
+            z-index: 5;
+        }
+        .type>p{
+            color: #db163a;
+            font-family: Intro-Cond-Black-Free;
+            font-size: 18px;
+        }
+        .type-2>p{
+            color: #db163a;
+            font-family: Intro-Cond-Black-Free;
+            font-size: 18px;
+        }
+        .type-3>p{
+            color: #db163a;
+            font-family: Intro-Cond-Black-Free;
+            font-size: 18px;
+        }
+        .cal{
+            font-family: Futura-CondensedLight;
+            font-size: 30px;
+        }
+        .calories{
+            font-family: Futura-CondensedLight;
+            font-size: 30px;
+        }
+        .section-2-content>.pricing>div>.cal{
+            font-family: Futura-CondensedLight;
+            font-size: 25px;
+        }
+        .price{
+            font-family: futura-pt-cond-bold;
+            font-size: 45px;
+            margin-right: 10px;
+            text-decoration: underline;
+            text-decoration-color: rgba(0, 0, 0, 0.2);
+        }
+        sup{
+            font-size: 26px;
+        }
+        .desc{
+            font-family: Intro-Cond-Regular;
+            color: #231f20;
+            font-size: 16px;
+        }
+        .bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        .txt-1{
+            position: absolute;
+            font-family: Helvetica Medium Condensed;
+            color: #231f20;
+            z-index: 6;
+            bottom: 6%;
+            left: 1.2%;
+            width: 500px;
+        }
+        .txt-2{
+            position: absolute;
+            font-family: Helvetica Medium Condensed;
+            color: #231f20;
+            z-index: 6;
+            bottom: 6%;
+            left: 22%;
+            width: 500px;
+            text-align: right;
+        }
+        .txt-3{
+            position: absolute;
+            font-family: Helvetica Medium Condensed;
+            color: #231f20;
+            z-index: 6;
+            bottom: 6%;
+            left: 67%;
+            width: 600px;
+            text-align: right;
+            font-size: 12px;
+        }
+        .txt-1>p{
+            font-size: 15px;
+        }
+        .txt-2>p{
+            font-size: 8px;
+        }
+        .footer-txt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 15;
+            bottom: 0;
+            height: 57px;
+            width: 1920px;
+        }
+        .box{
+            width: 15px;
+            height: 15px;
+            border-radius: 1px;
+            background-color: white;
+            margin: 0 10px;
+        }
+        .footer-txt>span{
+            font-family: Intro-Cond-SemiBold;
+            color: white;
+            font-size: 20px;
+        }
+        .new{
+            position: absolute;
+            top: 69%;
+            left: 13.5%;
+            z-index: 4;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div class="divider"></div>
+        <img class="top-red" src="top-red.png">
+        <img class="bottom-red" src="bottom-red.png">
+        <p class="page-1-title" data-editable="text" >EVERYDAY FAVES</p>
+        <p class="page-2-title" data-editable="text" >MADE TO CRAVE</p>
+        <div class="section-1 section">
+            <p class="section-title" data-editable="text" >HAMBURGERS</p>
+            <hr class="section-line">
+        </div>
+        <div class="type">
+            <p>SANDWITCH</p>
+            <p>COMBO</p>
+        </div>
+        <div class="section-1-content">
+            <p class="number">1</p>
+            <img class="picture" src="1.png" data-editable="src">
+            <div class="catagories">
+                <p><span data-editable="text" class="txt-edit-1">DAVE’S SINGLE</span><SUP>®</SUP></p>
+                <p><span data-editable="text" class="txt-edit-1">DAVE’S DOUBLE</span><SUP>®</SUP></p>
+                <p><span data-editable="text" class="txt-edit-1">DAVE’S TRIPLE</span><SUP>®</SUP></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">Cal: 590</p>
+                </div>
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">Cal: 590</p>
+                </div>
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">Cal: 590</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">940-1380</p>
+                </div>
+                <div>
+                    <p class="price"><sup>$</sup><span  data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">1210-1650</p>
+                </div>
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">1510-1950</p>
+                </div>
+            </div>
+        </div>
+        <div class="type-2">
+            <p>SANDWITCH</p>
+            <p>COMBO</p>
+        </div>
+        <div class="section-1-content-2">
+            <p class="number">2</p>
+            <img class="picture" src="2.png" data-editable="src">
+            <div class="catagories">
+                <p><span data-editable="text">BACONATOR</span><SUP>®</SUP></p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">8.19</span></p>
+                    <p class="cal" data-editable="text">Cal: 960</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text" >13.19</span></p>
+                    <p class="cal" data-editable="text" >1310-1760</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-2 section">
+            <p class="section-title" data-editable="text">CHICKEN</p>
+            <hr class="section-line">
+        </div>
+        <div class="section-2-content">
+            <p class="number">3</p>
+            <img class="picture" src="3.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">10 PC. NUGGETS</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">10.59</span></p>
+                    <p class="calories" data-editable="text">Spicy Cal: 900-1460</p>
+                    <p class="calories" data-editable="text">Reg Cal: 890-1340</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-2-content-1">
+            <p class="number">4</p>
+            <img class="picture" src="4.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">CLASSIC</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">6.59</span></p>
+                    <p class="cal" data-editable="text" >Cal: 490</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">11.39</span></p>
+                    <p class="cal" data-editable="text">840-1290</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-2-content-2">
+            <p class="number">5</p>
+            <img class="picture" src="5.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">GRILLED CHICKEN RANCH WRAP</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">6.29</span></p>
+                    <p class="cal" data-editable="text">Cal: 420</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">11.39</span></p>
+                    <p class="cal" data-editable="text">770-1210</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-2-content-3">
+            <p class="number">6</p>
+            <img class="picture" src="6.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">spicy</p>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">6.59</span></p>
+                    <p class="cal" data-editable="text">Cal: 490</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">11.39</span></p>
+                    <p class="cal" data-editable="text">840-1280</p>
+                </div>
+            </div>
+        </div>
+        <div class="type-3">
+            <p>SANDWITCH</p>
+            <p>COMBO</p>
+        </div>
+        <div class="section-3 section">
+            <p class="section-title" data-editable="text">HAMBURGERS</p>
+            <hr class="section-line">
+        </div>
+        <div class="section-3-content">
+            <p class="number">7</p>
+            <img class="picture" src="7.png" data-editable="src">
+            <div class="catagories">
+                <p><span data-editable="text" >BIG BACON CLASSIC</span><SUP>®</SUP></p>
+                <span class="desc" data-editable="text">Applewood Smoked Bacon, American Cheese</span>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">7.19</span></p>
+                    <p class="cal" data-editable="text">Cal: 590</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">12.19</span></p>
+                    <p class="cal" data-editable="text">1000-1440</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-3-content-1">
+            <p class="number">8</p>
+            <img class="picture" src="8.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">GRILLED CHICKEN RANCH WRAP</p>
+                <span class="desc" data-editable="text">Pretzel Bun, Applewood Smoked Bacon, Beer Cheese Sauce, Smoky Honey Mustard, Crispy Onions, Muenster Cheese</span>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">7.29</span></p>
+                    <p class="cal" data-editable="text">Cal: 590</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">12.39</span></p>
+                    <p class="cal" data-editable="text">1200-1640</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-3-content-2">
+            <p class="number">9</p>
+            <img class="picture" src="9.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">Bourbon bacon</p>
+                <span class="desc" data-editable="text">Applewood Smoked Bacon, Bourbon Bacon Sauce, Crispy Onions, American Cheese</span>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">7.29</span></p>
+                    <p class="cal" data-editable="text">Cal: 730</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">12.29</span></p>
+                    <p class="cal" data-editable="text">1080-1520</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-4 section">
+            <p class="section-title" data-editable="text">CHICKEN</p>
+            <hr class="section-line">
+        </div>
+        <div class="section-3-content-3">
+            <p class="number">10</p>
+            <img class="picture" src="10.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">ASIAGO RANCH CLUB</p>
+                <span class="desc" data-editable="text">Classic Chicken, Applewood Smoked Bacon, Ranch Sauce, Asiago Cheese</span>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">7.49</span></p>
+                    <p class="cal" data-editable="text">Cal: 620</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">12.49</span></p>
+                    <p class="cal" data-editable="text">970-1420</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-3-content-4">
+            <p class="number">11</p>
+            <img class="picture" src="11.png" data-editable="src">
+            <div class="catagories">
+                <p data-editable="text">PRETZEL BACON PUB</p>
+                <span class="desc" data-editable="text">Classic Chicken, Pretzel Bun, Applewood Smoked Bacon, Beer Cheese Sauce, Smoky Honey Mustard, Crispy Onions,</span>
+                <p></p>
+                <p></p>
+            </div>
+            <div class="pricing">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">5.99</span></p>
+                    <p class="cal" data-editable="text">Cal: 840</p>
+                </div>
+            </div>
+            <div class="pricing-2">
+                <div>
+                    <p class="price"><sup>$</sup><span data-editable="text">13.09</span></p>
+                    <p class="cal" data-editable="text">1190-1640</p>
+                </div>
+            </div>
+        </div>
+
+            <div class="txt-1">
+               <p data-editable="text">Additional nutrition information available upon request.</p>
+               <p data-editable="text">2,000 calories a day is used for general nutrition advice, but calorie needs vary.</p>
+            </div>
+            <div class="txt-2">
+                <p data-editable="text">“Dr Pepper” is a registered trademark of Dr Pepper/Seven Up, Inc.</p>
+                <p data-editable="text">“Coca-Cola” and “Sprite” are registered trademarks of </p>
+                <p data-editable="text">The Coca-Cola Company.  © 2018 Quality Is Our Recipe, LLC</p>
+            </div>
+            <p class="txt-3" data-editable="text">Our products may contain or come into contact with common allergens. Visit Wendys.com for more information.</p>
+
+            <div class="footer-txt">
+                <span data-editable="text">CREATE YOUR COMBO WITH A CHOICE OF SIDE:</span>
+                <div class="box"></div>
+                <span data-editable="text" >NATURAL-CUT FRIES</span>
+                <div class="box"></div>
+                <span data-editable="text">CHILI</span>
+                <div class="box"></div>
+                <span data-editable="text">SOUR CREAM AND CHIVE BAKED POTATO</span>
+            </div>
+
+            <img src="new.png" class="new" data-editable="src">
+    </div>
+
+    <script src="./jquery.js"></script>
+    <script src="./jquery.fit_font.js"></script>
+    <script>
+        $(function(){
+  $('.page-1-title').fit_font({
+    multiline: false,
+    max: 70, 
+    min: 1,
+    width: 280,
+  });
+});
+        $(function(){
+  $('.page-2-title').fit_font({
+    multiline: false,
+    max: 70, 
+    min: 1,
+    width: 280,
+  });
+});
+        $(function(){
+  $('.price').fit_font({
+    multiline: false,
+    max: 45, 
+    min: 1,
+    width: 105,
+  });
+});
+        $(function(){
+  $('.cal').fit_font({
+    multiline: false,
+    max: 30, 
+    min: 1,
+    width: 150,
+  });
+});
+        $(function(){
+  $('.type>p').fit_font({
+    multiline: false,
+    max: 18, 
+    min: 1,
+    width: 110,
+  });
+});
+        $(function(){
+  $('.type-1>p').fit_font({
+    multiline: false,
+    max: 18, 
+    min: 1,
+    width: 110,
+  });
+});
+        $(function(){
+  $('.type-2>p').fit_font({
+    multiline: false,
+    max: 18, 
+    min: 1,
+    width: 110,
+  });
+});
+        $(function(){
+  $('.txt-edit-1').fit_font({
+    multiline: false,
+    max: 33, 
+    min: 1,
+    width: 212,
+  });
+});
+    </script>
+</body>
+</html>
