@@ -973,14 +973,15 @@ async function updatePresaleInfo() {
 
         //check the current stage price
         const presaleData = await presaleContract.methods.presale(currentStage).call();
+        console.log(presaleData)
 
-        const currentPrice = web3.utils.fromWei(presaleData.price, 'ether')
+        const currentPrice = presaleData.price;
         document.querySelectorAll(".token-current-price").forEach((value) => {
             value.innerHTML = "1 Retik = " + currentPrice;
         })
 
         //check the next stage price
-        const nextPrice = web3.utils.fromWei(presaleData.nextStagePrice, 'ether')
+        const nextPrice = presaleData.nextStagePrice;
         document.querySelectorAll(".token-next-stage-price").forEach((value) => {
             value.innerHTML = "Next Stage Price = " + nextPrice;
         }) 
@@ -1087,66 +1088,25 @@ async function connectMetamask() {
     }
 }
 
-async function connectWalletConect() {
-
-    var provider = new WalletConnectProvider.default({
-        rpc: {
-            1: web3Provider
-        },
-        bridge: 'https://bridge.walletconnect.org'
-    });
-
-    await provider.enable();
-
-    //  Create Web3 instance
-    const web3 = new Web3(provider);
-    window.w3 = web3
-
-    var accounts = await web3.eth.getAccounts(); // get all connected accounts
-    address = accounts[0]; // get the primary account
-    console.log(address)
-
-    removeWalletsOption() // remove the wallet options
-    document.querySelectorAll(".user-holdings").forEach((value) => {
-        value.classList.remove("hidden")
-    })
-    showUsersHoldings();
-}
-
-var sign = async (msg) => {
-    if (w3) {
-        return await w3.eth.personal.sign(msg, account)
-    } else {
-        return false
-    }
-}
-
-var contract = async (abi, address) => {
-    if (w3) {
-        return new w3.eth.Contract(abi, address)
-    } else {
-        return false
-    }
-}
-
-var disconnect = async () => {
-    // Close provider session
-    await provider.disconnect()
-}
-
-
 // Function to change the network
 const networkHandler = async () => {
     try {
-        await window.ethereum.request({
-            method: "wallet_switchEthereumChain",
-            params: [{
-                chainId: "0x1"
-            }],
+  
+        await  window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: "0x5"}],
         });
-    } catch (error) {
-        console.log(error);
-    }
+        console.log("You have switched to the right network")
+        
+      } catch (switchError) {
+        
+        // The network has not been added to MetaMask
+        if (switchError.code === 4902) {
+         console.log("Please add the Polygon network to MetaMask")
+        }
+        console.log("Cannot switch to the network")
+        
+      }
 };
 
 // Function to check user holdings 
@@ -1326,6 +1286,10 @@ async function buyToken() {
             }
         } catch (error) {
             console.error('Error buying tokens with USDT:', error);
+            if (error.message.toLowerCase().includes("insufficient funds")) {
+                // Display an alert to the user
+                alert("Insufficient funds. Please make sure you have enough USDT in your wallet.");
+            }
         }
 
     }
@@ -1360,6 +1324,10 @@ async function buyToken() {
             }
         } catch (error) {
             console.error('Error buying tokens with USDC:', error);
+            if (error.message.toLowerCase().includes("insufficient funds")) {
+                // Display an alert to the user
+                alert("Insufficient funds. Please make sure you have enough USDC in your wallet.");
+            }
         }
 
     } else {
@@ -1391,6 +1359,10 @@ async function buyToken() {
             }
         } catch (error) {
             console.error('Error buying tokens:', error);
+            if (error.message.toLowerCase().includes("insufficient funds")) {
+                // Display an alert to the user
+                alert("Insufficient funds. Please make sure you have enough ETH in your wallet.");
+            }
         }
     }
 }
