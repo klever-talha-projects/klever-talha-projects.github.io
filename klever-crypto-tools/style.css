@@ -481,7 +481,7 @@ body.collapsed .expand-btn svg {
   }
 }
 
-@media only screen and (max-aspect-ratio: 1/2) {
+@media only screen and (max-width: 780px) {
   body {
     flex-direction: column;
     width: 100vw;
