@@ -64,6 +64,7 @@ body {
 .sidebar-title {
   color: #E0EAFF;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 body.collapsed .sidebar {
@@ -93,6 +94,7 @@ body.collapsed .hide {
   flex-grow: 1;
   outline: none;
   border: none;
+  color: var(--text-link);
 }
 
 .search__wrapper svg {
@@ -183,7 +185,6 @@ body.collapsed .sidebar-top {
   line-height: 1.125rem;
   margin-bottom: 0.5rem;
   animation: fadeIn 0.2s ease-in-out;
-  cursor: pointer;
 }
 
 body.collapsed h2 {
@@ -508,7 +509,7 @@ body.collapsed .expand-btn svg {
     overflow: hidden;
   }
   .navbar.active {
-    height: auto;
+    height: 855px;
   }
   .row {
     align-items: flex-start;
@@ -518,6 +519,7 @@ body.collapsed .expand-btn svg {
     justify-content: space-between;
     padding: 15px 20px;
     transition: height 400ms;
+    -webkit-tap-highlight-color: transparent
   }
   .hamburger {
     fill: none;
@@ -540,97 +542,4 @@ body.collapsed .expand-btn svg {
     margin-bottom: 2rem;
   }
 
-}
-
-
-.container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-}
-
-label {
-  font-weight: bold;
-  color: #555;
-}
-
-input[type="number"],
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-p {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #555;
-}
-
-.result {
-  font-weight: bold;
-  color: #333;
-}
-
-.symbol-match {
-  cursor: pointer;
-  padding: 5px 10px;
-  margin: 2px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.symbol-match:hover {
-  background-color: #e0e0e0;
-}
-
-.symbol-match:active {
-  background-color: #d9d9d9;
-}
-
-#symbolMatches {
-  width: calc(100% - 20px);
-  max-height: 150px;
-  overflow-y: auto;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-  display: none;
-  /* Hide initially */
-}
-
-.symbol-match:not(:last-child) {
-  border-bottom: 1px solid #ccc;
 }
