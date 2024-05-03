@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (window.innerWidth < 780) {
     navbar.innerHTML += htmlCode;
-    navbarExpand()
     search()
   } else {
     sidebar.innerHTML += htmlCode;
