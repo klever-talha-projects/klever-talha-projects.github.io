@@ -18548,9 +18548,6 @@ img {
         padding-left: 30px;
         padding-right: 30px;
     }
-    .container>.container{
-        padding = 0px;
-    }
 
     .feature-box-image,
     .pricing-box {
