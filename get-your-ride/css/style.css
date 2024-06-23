@@ -3725,6 +3725,8 @@ a.btn-border:hover a {
 
 a.btn-black{
     background: #121212 !important;
+    margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .d-btn-close {
