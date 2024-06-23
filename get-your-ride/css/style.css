@@ -18468,6 +18468,9 @@ img {
     #topbar{
         display: none;
     }
+    .logo img{
+    width: 105px;
+    }
     .spacer-double:nth-child(1),.spacer-double:nth-child(2){
         display: none;
     }
