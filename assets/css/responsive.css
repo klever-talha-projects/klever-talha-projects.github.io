@@ -1,0 +1,633 @@
+@charset "UTF-8";
+
+/* Made By - https://kleverroi.com */
+/* originally authored by Talha Shaheen - https://klever-talha.github.io */
+/* Copyright (c) 2024 Klever ROI  */
+
+
+@media (max-aspect-ratio: 3.5/1) {
+    .hero {
+        height: 100vh;
+    }
+    canvas:nth-child(1) {
+        width: 60%;
+    }
+    .ticker{
+        width: 300px;
+        font-size: 45px;
+    }
+    .nav-links{
+        gap: 42px;
+    }
+    .nav-links li a{
+        font-size: 28px;
+    }
+    .btn-buy{
+        font-size: 28px;
+    }
+    .logo img{
+        width: 70px;
+    }
+    .logo{
+        font-size: 28px;
+    }
+    .cta-buttons .icon img {
+        width: 42px;
+    }
+    .about-text{
+        width: 50%;
+    }
+    .buy{
+        padding: 160px 0;
+    }
+    .tokenomics .info-blocks{
+        gap: 30px;
+    }
+    .token-info p{
+        font-size: 1.4vw;
+    }
+    .code-box img{
+        height: 35px;
+    }
+    .featured-strips {
+    padding: 30px 0 250px 0;
+    }
+    .featured {
+        height: 50px;
+    }
+    .featured-strips > h2{
+        margin-bottom: 80px;
+    }
+    .cloud-left{
+        width: 30vw;
+    }
+    .cloud-right{
+        width: 15vw;
+    }
+    .social-btn{
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-aspect-ratio: 2.5/1) {
+    .hero {
+        height: 80vh;
+    }
+
+    .clouds {
+        left: 10%;
+    }
+
+    canvas:nth-child(1) {
+        width: 70%;
+    }
+    .ticker{
+        width: 250px;
+        font-size: 35px;
+    }
+    .nav-links{
+        gap: 20px;
+    }
+    .nav-links li a{
+        font-size: 18px;
+    }
+    .btn-buy{
+        font-size: 18px;
+    }
+    .logo img{
+        width: 50px;
+    }
+    .logo{
+        font-size: 18px;
+    }
+    .cta-buttons .icon img {
+        width: 30px;
+    }
+    .buy{
+        padding: 80px 0;
+    }
+    .tokenomics .info-blocks{
+        gap: 20px;
+    }
+    .token-info p{
+        font-size: 1.6vw;
+    }
+    .code-box img{
+        height: 25px;
+    }
+    .cloud-left{
+        width: 35vw;
+    }
+    .cloud-right{
+        width: 20vw;
+    }
+    .social-btn{
+        width: 60px;
+        height: 60px;
+    }
+    .footer .text h2{
+        font-size: 6vw;
+    }
+    .footer .tagline{
+        font-size: 1.8vw;
+    }
+}
+
+@media (max-aspect-ratio: 1.5/1) {
+    .hero {
+        height: 75vh;
+    }
+
+    .big-right-mountain {
+        right: -10%;
+    }
+
+    .clouds {
+        left: 10%;
+    }
+
+    .moon-big {
+        top: 2%;
+    }
+    canvas:nth-child(1) {
+        width: 75%;
+    }
+    .ticker{
+        width: 200px;
+        font-size: 30px;
+    }
+    .nav-links{
+        gap: 20px;
+    }
+    .nav-links li a{
+        font-size: 18px;
+    }
+    .btn-buy{
+        font-size: 18px;
+    }
+    .logo img{
+        width: 50px;
+    }
+    .logo{
+        font-size: 18px;
+    }
+    .cta-buttons .icon img {
+        width: 30px;
+    }
+    .top-img{
+        top: -1%;
+    }
+    .token-info p{
+        font-size: 2vw;
+    }
+    .text>h2{
+        font-size: 6.5vw;
+    }
+    .code-box{
+        font-size: 2.2vw;
+    }
+    .code-box:last-child>span{
+        max-width: 30vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .tokenomics .text{
+        width: 50%;
+    }
+    .tokenomics .image{
+        width: 30%;
+    }
+    .featured-strips > h2{
+        font-size: 6.5vw;
+    }
+    .featured-strips {
+        padding: 30px 0 150px 0;
+    }
+    .featured {
+        height: 35px;
+    }
+    .cloud-left{
+        width: 60vw;
+    }
+    .cloud-right{
+        width: 30vw;
+    }
+    .social-btn{
+        width: 60px;
+        height: 60px;
+    }
+    .footer .text h2{
+        font-size: 7vw;
+    }
+    .footer .tagline{
+        font-size: 2vw;
+    }
+    
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .hero {
+        height: 68vh;
+    }
+    .space-ship.animate{
+        animation: space-ship-2 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+    }
+
+    .big-right-mountain {
+        right: -28%;
+    }
+
+    .clouds {
+        left: 10%;
+    }
+
+    .moon-big {
+        top: 2%;
+    }
+
+    .big-left-mountain {
+        width: 50%;
+    }
+
+    .small-right-mountain {
+        width: 40%;
+    }
+
+    .small-left-mountain {
+        width: 30%;
+    }
+    canvas:nth-child(1) {
+        width: 90%;
+    }
+    h2{
+        font-size: 10vw;
+        text-align: center;
+    }
+    .about-text{
+        width: 80%;
+        text-align: center;
+    }
+    .about-text p{
+        font-size: 3vw;
+    }
+    .about-image{
+        width: 80%;
+    }
+    .top-img{
+        top: -1%;
+    }
+    .buy h2{
+        font-size: 11vw;
+        margin: 50px 0;
+    }
+    .featured-strips > h2{
+        font-size: 6.5vw;
+    }
+    .featured-strips > h2{
+        font-size: 10vw;
+    }
+    .featured {
+        height: 40px;
+    }
+
+
+}
+
+@media (max-aspect-ratio: 1/1.5) {
+    .hero {
+        height: 58vh;
+    }
+
+    .big-right-mountain {
+        right: -50%;
+        height: 100%;
+    }
+
+    .bg-mountains {
+        bottom: 20%;
+    }
+
+    .clouds {
+        left: -40%;
+        height: 40%;
+    }
+
+    .moon-small {
+        width: 15%;
+        top: 28%;
+        right: 6%;
+    }
+
+    .moon-big {
+        width: 26%;
+        top: 5%;
+        left: 4%;
+    }
+
+    .big-left-mountain {
+        width: 75%;
+        bottom: 18%;
+    }
+
+    .small-right-mountain {
+        width: 45%;
+        right: 0%;
+    }
+
+    .small-left-mountain {
+        width: 40%;
+        bottom: 12%;
+    }
+    .space-ship.animate{
+        animation: space-ship-3 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+    }
+    canvas:nth-child(1) {
+        width: 130%;
+    }
+    .ticker{
+        width: 160px;
+        font-size: 25px;
+    }
+    h2{
+        font-size: 12vw;
+        text-align: center;
+    }
+    .about-text p{
+        font-size: 4vw;
+    }
+    .buy h2{
+        font-size: 12vw;
+        margin: 30px 0;
+    }
+    .featured-strip{
+        transform: rotate(12deg);
+    }
+    .featured {
+        height: 25px;
+    }
+    
+}
+
+@media (max-aspect-ratio: 1/1.75) {
+    .hero {
+        height: 55vh;
+    }
+
+    .big-right-mountain {
+        right: -40%;
+        height: 80%;
+    }
+
+    .bg-mountains {
+        bottom: 20%;
+    }
+
+    .clouds {
+        left: -40%;
+        height: 40%;
+    }
+
+    .moon-small {
+        width: 15%;
+        top: 28%;
+        right: 4%;
+    }
+
+    .moon-big {
+        width: 25%;
+        top: 5%;
+        left: 3%;
+    }
+
+    .big-left-mountain {
+        width: 75%;
+        bottom: 18%;
+    }
+
+    .small-right-mountain {
+        width: 40%;
+        right: 0%;
+    }
+
+    .small-left-mountain {
+        width: 45%;
+        bottom: 12%;
+    }
+    .space-ship.animate{
+        animation: space-ship-4 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+    }
+    canvas:nth-child(1) {
+        width: 140%;
+    }
+    .buy h2{
+        font-size: 12vw;
+        margin: 30px 0;
+    }
+    .featured-strip{
+        transform: rotate(13deg);
+    }
+    .featured {
+        height: 20px;
+    }
+
+}
+
+@media (max-aspect-ratio: 1/2.5) {
+    .hero {
+        height: 55vh;
+    }
+
+    .big-right-mountain {
+        right: -45%;
+        height: 80%;
+    }
+
+    .bg-mountains {
+        bottom: 20%;
+    }
+
+    .clouds {
+        left: -80%;
+        height: 40%;
+    }
+
+    .moon-small {
+        width: 15%;
+        top: 28%;
+        right: 4%;
+    }
+
+    .moon-big {
+        width: 35%;
+        top: 5%;
+        left: 3%;
+    }
+
+    .big-left-mountain {
+        width: 80%;
+        bottom: 18%;
+    }
+
+    .small-right-mountain {
+        width: 50%;
+        right: 0%;
+    }
+
+    .small-left-mountain {
+        width: 45%;
+        bottom: 12%;
+    }
+    .space-ship.animate{
+        animation: space-ship-5 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+    }
+    canvas:nth-child(1) {
+        width: 160%;
+    }
+    .buy{
+        padding: 50px 0;
+    }
+    .featured {
+        height: 20px;
+    }
+
+
+}
+
+@media (max-width: 788px) {
+    .navbar {
+        width: 90%;
+    }
+    .nav-links {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: #251F25;
+        padding: 0px 20px;
+        border-radius: 20px;
+        transition: max-height 0.5s ease, padding 0.5s ease;
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    .nav-links.active {
+        display: flex;
+        max-height: 500px;
+        padding: 20px 20px;
+    }
+
+    .cta-buttons {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-right: 21px;
+    }
+
+    .h1-outline {
+        font-size: 17vw;
+    }
+
+    .h1-solid {
+        font-size: 17vw;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-text{
+        margin-bottom: 20px;
+    }
+    .about-image{
+        margin-top: 20px;
+    }
+    .buy .steps-img{
+        width: 90%;
+    }
+    .tokenomics{
+        flex-direction: column;
+        align-items: center;
+    }
+    .text>h2{
+        font-size: 12vw;
+    }
+    .tokenomics .text{
+        width: 80%;
+    }
+    .tokenomics .image{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .tokenomics .image img{
+        width: 80%;
+    }
+    .info-blocks{
+        justify-content: center;
+    }
+    .code-box{
+        font-size: 7vw;
+    }
+    .token-info{
+        max-width: 80vw;
+    }
+    .token-info p{
+        font-size: 6vw;
+        text-align: center;
+    }
+    .code-box:last-child>span{
+        max-width: 50vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .featured-strips > h2{
+        margin-bottom: 65px;
+    }
+    .featured-strips > h2{
+        font-size: 12vw;
+    }
+    .featured-strips {
+        padding: 30px 0 70px 0;
+    }
+    .cloud-left{
+        width: 70vw;
+    }
+    .cloud-right{
+        width: 50vw;
+    }
+    .social-btn{
+        width: 40px;
+        height: 40px;
+        box-shadow: 2px 2px 0px 0px #000000;
+    }
+    .footer{
+        height: 30vh;
+    }
+    .footer .text h2{
+        font-size: 12vw;
+        text-align: left;
+    }
+    .footer .tagline{
+        font-size: 3vw;
+    }
+    .footer .text{
+        width: 80%;
+    }
+    .footer .image{
+        width: 30%;
+    }
+    .about-text img{
+        width: 60%;
+    }
+    .footer-image{
+        left: 55%;
+    }
+
+
+}
