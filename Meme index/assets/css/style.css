@@ -1,0 +1,742 @@
+@charset "UTF-8";
+
+/* Made By - https://kleverroi.com */
+/* originally authored by Talha Shaheen - https://klever-talha.github.io */
+/* Copyright (c) 2024 Klever ROI  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+    background-color: #CC3B57;
+}
+
+@font-face {
+    font-family: morsa;
+    src: url("/assets/fonts/morsa.otf");
+}
+
+@font-face {
+    font-family: marvin;
+    src: url("/assets/fonts/marvin.otf");
+}
+
+@font-face {
+    font-family: poppins-bold;
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: poppins-regular;
+    src: url("/assets/fonts/Poppins-Regular.ttf");
+}
+
+
+/* Preloader -----------------------------------> */
+
+.preload {
+    overflow: hidden;
+}
+
+.preload-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999999999;
+    display: block;
+    overflow: hidden;
+}
+
+.preload-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    z-index: 100;
+    margin: -200px 0 0 -200px;
+    background: #ffffff;
+    background: url(../icon/preload.png) center center no-repeat;
+    animation: preload 1s linear infinite alternate;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn;
+}
+
+
+/* Navbar -----------------------------------> */
+
+.navbar {
+    font-family: marvin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #251F25;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    border-radius: 120px;
+    margin-top: 20px;
+    width: 80%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: morsa;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cta-buttons .icon img {
+    width: 30px;
+}
+
+.btn-buy {
+    background-color: #FFD700;
+    padding: 14px 30px;
+    color: black;
+    text-decoration: none;
+    border-radius: 150px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Hero Section -----------------------------------> */
+
+.hero {
+    background-image: url("/assets/images/hero/bg.svg");
+    height: 75vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.space-ship {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    z-index: 11;
+    width: 0%;
+    transform: rotate(0deg);
+}
+
+.space-ship.animate {
+    animation: space-ship 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+}
+
+.moon-small {
+    position: absolute;
+    top: 25%;
+    right: 20%;
+    z-index: 1;
+    width: 6%;
+    opacity: 0.2;
+    transform: rotate(0deg);
+    animation: planet-rotate 80s linear 0s infinite;
+}
+
+.moon-big {
+    position: absolute;
+    top: -5%;
+    left: 12%;
+    z-index: 1;
+    width: 16%;
+    opacity: 0.6;
+    animation: planet-rotate 60s linear 0s infinite;
+}
+
+.h1-outline {
+    font-size: 12vw;
+    font-family: morsa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+    color: transparent;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-shadow: none;
+    opacity: 0.8;
+}
+
+.h1-solid {
+    font-size: 12vw;
+    color: #fff;
+    font-family: morsa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+.clouds {
+    position: absolute;
+    top: -5%;
+    left: 20%;
+    z-index: 3;
+    height: 60%;
+    transform: scale(1.5);
+}
+
+.clouds.animate {
+    animation: clouds 1s ease 0s forwards;
+}
+
+.bg-mountains {
+    position: absolute;
+    bottom: 25%;
+    z-index: 4;
+    height: 30%;
+    transform: scale(3);
+    transform-origin: center;
+}
+
+.bg-mountains.animate {
+    animation: bg-mountains 1s ease 0s forwards;
+}
+
+.floor {
+    position: absolute;
+    bottom: 0%;
+    z-index: 5;
+    height: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+
+}
+
+.floor.animate {
+    animation: floor-up 1s ease 0s forwards;
+}
+
+.big-left-mountain {
+    position: absolute;
+    bottom: 15%;
+    left: -1%;
+    transform: translateX(-100%);
+    z-index: 6;
+    width: 40%;
+
+}
+
+.big-left-mountain.animate {
+    animation: mountain-1 1s ease 1s forwards;
+}
+
+.small-left-mountain {
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    z-index: 7;
+    width: 20%;
+    transform: translateX(-150%);
+}
+
+.small-left-mountain.animate {
+    animation: mountain-4 1s ease 1.5s forwards;
+}
+
+.small-right-mountain {
+    position: absolute;
+    bottom: 10%;
+    right: 15%;
+    z-index: 7;
+    width: 30%;
+    transform: translateX(200%);
+}
+
+.small-right-mountain.animate {
+    animation: mountain-3 1s ease 1.5s forwards;
+}
+
+.big-right-mountain {
+    position: absolute;
+    bottom: 0%;
+    right: -2%;
+    z-index: 8;
+    height: 100%;
+    transform: translateX(100%);
+}
+
+.big-right-mountain.animate {
+    animation: mountain-2 1s ease 1s forwards;
+}
+
+#character {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 6;
+    opacity: 0;
+}
+
+#character.animate{
+    animation: character 1s ease 4s forwards;
+}
+
+canvas:nth-child(1) {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ticker strip -----------------------------------> */
+
+.ticker-strip {
+    width: 100%;
+    overflow: hidden;
+    background-color: #FED83E;
+    padding: 8px 0;
+}
+
+.ticker-container {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 10s linear infinite;
+}
+
+.ticker {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #251F25;
+    font-family: marvin;
+}
+
+/* about section -----------------------------------> */
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+.about-text {
+    color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+    width: 60%;
+}
+
+.about-text img{
+    width: 35%;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+.about-text img:hover{
+    transform: scale(0.9);
+}
+
+h2{
+    font-family: marvin;
+    font-size: 5vw;
+}
+
+.about-text p{
+    font-family: poppins-regular;
+    font-size: 1.3vw;
+}
+
+.about-image {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 30%;
+}
+
+.about-image img {
+    width: 80%;
+}
+
+#deepspace{
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: #251F25;
+    padding: 50px 0;
+    text-align: center;
+    color: #333;
+}
+
+/* how to buy -----------------------------------> */
+
+.buy{
+    width: 100%;
+    background-color: #FFECBD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.buy h2{
+    font-family: marvin;
+    font-size: 10vw;
+    margin: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.buy .steps-img{
+    width: 70%;
+    position: relative;
+    z-index: 1;
+}
+
+.flare {
+    width: 500%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 0.1;
+    animation: flare-rotate 20s linear infinite;
+}
+
+.top-img{
+    width: 110vw;
+    position: absolute;
+    top: -9%;
+    z-index: 5;
+}
+
+
+/* tokenomics -----------------------------------> */
+
+.tokenomics{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 0;
+    background-color: #FED83E;
+    position: relative;
+    overflow: hidden;
+}
+
+.tokenomics .border{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 0;
+    height: 35px;
+}
+
+.tokenomics .image{
+    width: 25%;
+}
+
+.tokenomics .image img{
+    width: 100%;
+}
+
+.tokenomics .text{
+    width: 60%;
+}
+
+.tokenomics .info-blocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+h3{
+    font-family: marvin;
+    font-size: 3vw;
+}
+
+.token-info p{
+    font-family: poppins-bold;
+    font-size: 2vw;
+}
+.box-outline{
+    border-radius: 10px;
+    border: 2px solid #000; /* Black border */
+    padding: 8px 7px;
+    background-color: #FFCA3A;
+    width: fit-content;
+}
+
+.code-box {
+    background-color: #FAF2C5; /* Light yellow background */
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid #000; /* Black border */
+    display: flex;
+    align-items: center;
+    font-family: poppins-regular;
+    color: #333; /* Text color */
+    position: relative;
+    width: fit-content;
+    box-shadow: 0px 1px 1px 0px #000000;
+    font-size: 1.6vw;
+
+}
+
+.code-text {
+    flex-grow: 1;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.copy-button {
+    background-color: #333; /* Dark button color */
+    color: #FFF;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.code-box img{
+    height: 26px;
+    cursor: pointer;
+    margin-left: 50px;
+}
+
+.copy-button:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+.hover-text {
+    position: absolute;
+    top: -80%;
+    right: 0%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-size: 10px;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.bottom-img{
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+    z-index: 1;
+}
+
+/* featured stripe -----------------------------------> */
+
+.featured-strips{
+    background-color: #FED83E;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 100px 0;
+
+}
+
+.featured {
+    flex: 0 0 auto;
+    text-align: center;
+    font-weight: bold;
+    height: 35px;
+    margin: 0 20px;
+}
+
+.featured-strip {
+    width: 110%;
+    overflow: hidden;
+    background-color: #CF3A54;
+    padding: 8px 0;
+    transform: rotate(5deg);
+}
+
+.featured-strip.two{
+    transform: rotate(-5deg) translateY(-100%);
+}
+
+.featured-strip.two>.featured-container{
+    animation: scroll 10s linear infinite reverse ;
+}
+
+.featured-container {
+    display: flex;
+    width: calc(200%);
+    animation: scroll 10s linear infinite;
+}
+
+.featured-strips>.bottom-img{
+    bottom: -1%;
+}
+
+/* footer -----------------------------------> */
+
+.footer{
+    width: 100%;
+    background-image: url("/assets/images/footer/bg.svg");
+    height: 50vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.cloud-right{
+    position: absolute;
+    bottom: -5%;
+    right: -3%;
+    z-index: 1;
+    width: 25vw;
+}
+.cloud-left{
+    position: absolute;
+    bottom: -1%;
+    left: -1%;
+    z-index: 1;
+    width: 50vw;
+}
+
+.planet{
+    width: 15vw;
+    z-index: 0;
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    opacity: 0.6;
+    animation: planet-rotate 80s linear 0s infinite;
+}
+
+.footer .text{
+    width: 80%;
+    color: white;
+    position: relative;
+    z-index: 2;
+    padding-top: 30px;
+}
+
+.footer .text h2{
+    margin: 0;
+    text-align: left;
+}
+
+.social-btns{
+    display: flex;
+}
+
+.social-btn{
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 11px;
+    box-shadow: 4px 4px 0px 0px #000000;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn img{
+    width: 90%;
+}
+
+.footer .tagline{
+    font-family: poppins-regular;
+    font-size: 1.3vw;
+}
+
+.footer-image{
+    height: 100%;
+    position: absolute;
+    bottom: -1%;
+    left: 40%;
+    z-index: 3;
+}

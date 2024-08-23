@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Index</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+
+    <div class="preload preload-container">
+        <div class="preload-logo"></div>
+    </div>
+
+    <div class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assets/images/logo/logo.png" alt="FLOCHI">
+                <p>MARTIAN</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+            </ul>
+            <div class="cta-buttons">
+                <a href="#" class="icon"><img src="assets/images/icons/telegram-icon.svg" alt="Telegram"></a>
+                <a href="#" class="icon"><img src="assets/images/icons/x-icon.svg" alt="Telegram"></a>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+
+        <p class="h1-outline">MARTIAN</p>
+        <h1 class="h1-solid">MARTIAN</h1>
+
+        <div id='character'>
+            <!-- 3d canvas -->
+        </div>
+
+        <img src="assets/images/hero/ship.svg" class="space-ship">
+
+        <img src="assets/images/hero/asset-9.svg" class="moon-big">
+        <img src="assets/images/hero/asset-8.svg" class="moon-small">
+        <img src="assets/images/hero/asset-7.svg" class="clouds">
+        <img src="assets/images/hero/asset-6.svg" class="bg-mountains">
+        <img src="assets/images/hero/asset-5.svg" class="small-left-mountain">
+        <img src="assets/images/hero/asset-4.svg" class="small-right-mountain">
+        <img src="assets/images/hero/asset-3.svg" class="big-right-mountain">
+        <img src="assets/images/hero/asset-2.svg" class="big-left-mountain">
+        <img src="assets/images/hero/asset-1.svg" class="floor">
+    </div>
+
+    <div class="ticker-strip">
+        <div class="ticker-container">
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <!-- Duplicate -->
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+            <div class="ticker">MARTIAN</div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="about-text">
+            <h2>About $MARTIAN</h2>
+            <p>Welcome to the world of Martian, the meme coin that's out of this world! 🚀<br><br>Born from the depths
+                of internet humor and fueled by community spirit, Martian is more than just a cryptocurrency—it's a
+                movement.<br><br>Whether you're here for the memes, the moonshots, or just to be part of a community
+                that's as wild and unpredictable as space itself, Martian is your ticket to the stars.<br><br>Join us as
+                we take this intergalactic journey together, where the only limit is your imagination (and maybe a few
+                zero-gravity memes).</p>
+                <img src="/assets/images/about/buy-btn.svg">
+        </div>
+        <div class="about-image">
+            <img src="assets/images/about/astronaut.png">
+        </div>
+        <canvas id="deepspace">
+        </canvas>
+    </div>
+
+    <div class="buy">
+        <h2>HOW TO BUY</h2>
+        <img src="assets/images/buy/flare.svg" class="flare">
+        <img src="assets/images/buy/steps.svg" class="steps-img">
+        <img src="assets/images/buy/top.svg" class="top-img">
+    </div>
+
+    <div class="tokenomics" id="tokenomics">
+        <div class="image">
+            <img src="assets/images/tokenomics/coins.svg" alt="">
+        </div>
+        <div class="text">
+            <h2>Tokenomics</h2>
+            <div class="info-blocks">
+                <div class="token-info">
+                    <p>Total Supply</p>
+                    <div class="box-outline">
+                        <div class="code-box">
+                            <span class="code-text">6,900,000,000</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="token-info">
+                    <p>Token Name</p>
+                    <div class="box-outline">
+                        <div class="code-box">
+                            <span class="code-text">Martian</span>
+                            <img src="assets/images/tokenomics/copy.svg" onclick="copyToClipboard(this)" class="copy-img">
+                            <div class="hover-text">Copied</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="token-info">
+                    <p>Token Symbol</p>
+                    <div class="box-outline">
+                        <div class="code-box">
+                            <span class="code-text">$Martian</span>
+                            <img src="assets/images/tokenomics/copy.svg" onclick="copyToClipboard(this)">
+                            <div class="hover-text">Copied</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="token-info">
+                    <p>Contract Address</p>
+                    <div class="box-outline">
+                        <div class="code-box">
+                            <span class="code-text">AtKjJndzNBJAo4Z7o23hTMcucBwJX94y94E2Aj82YWux</span>
+                            <img src="assets/images/tokenomics/copy.svg" onclick="copyToClipboard(this)">
+                            <div class="hover-text">Copied</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="assets/images/tokenomics/border.svg" class="border" style="top: 1%;">
+    </div>
+
+    <div class="featured-strips">
+        <h2>Featured in</h2>
+        <div class="featured-strip">
+            <div class="featured-container">
+                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
+                <!-- Duplicate the items to ensure a seamless loop -->
+                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
+            </div>
+        </div>
+        <div class="featured-strip two">
+            <div class="featured-container">
+                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
+                <!-- Duplicate the items to ensure a seamless loop -->
+                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
+                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
+            </div>
+        </div>
+        <img src="assets/images/featured/bottom.svg" class="bottom-img">
+    </div>
+
+    <div class="footer">
+        <img src="assets/images/footer/cloud-left.svg" class="cloud-right">
+        <img src="assets/images/footer/cloud-right.svg" class="cloud-left">
+        <img src="assets/images/footer/planet.svg" class="planet">
+        <div class="text">
+            <h2>Socials</h2>
+            <p class="tagline">Join the $MARTIAN community.</p>
+            <div class="social-btns">
+                <div class="social-btn"><img src="assets/images/icons/telegram-icon.svg" alt=""></div>
+                <div class="social-btn"><img src="assets/images/icons/x-icon.svg" alt=""></div>
+                <div class="social-btn"><img src="assets/images/icons/instagram.svg" alt=""></div>
+            </div>
+
+        </div>
+        <img src="assets/images/footer/monkey.png" class="footer-image">
+    </div>
+
+
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/hero-anim.js"></script>
+<script src="assets/js/3d.js" type="module"></script>
+
+</html>
