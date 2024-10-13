@@ -6,108 +6,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meme Index</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <script type="module" src="https://unpkg.com/@dotlottie/player-component@1.0.0/dist/dotlottie-player.js"></script>
 </head>
 
 <body>
-
-    <div class="preload preload-container">
-        <div class="preload-logo"></div>
+    <div class="notice-strip">
+        <div class="notice">
+            <p>
+                <span style="font-weight: 700;">Please Note:</span> Meme Index Team will never send you messages on any social networks, Please verify our social links via our website: Memeindex.com | Never Share Your Seed Phrase or Private Key with anyone.
+            </p>
+            <p>
+                <span style="font-weight: 700;">Please Note:</span> Meme Index Team will never send you messages on any social networks, Please verify our social links via our website: Memeindex.com | Never Share Your Seed Phrase or Private Key with anyone.
+            </p>
+        </div>
     </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/images/logo/logo.svg" alt="FLOCHI">
+            <p>Meme Index</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tokenomics">Tokenomics</a></li>
+        </ul>
+        <div class="cta-buttons">
+            <a href="#" class="icon"><img src="assets/images/icons/telegram-icon.svg" alt="Telegram"></a>
+            <a href="#" class="icon"><img src="assets/images/icons/x-icon.svg" alt="Telegram"></a>
+            <a href="#" class="btn-buy">Buy Now</a>
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="hero-section">
 
-    <div class="hero">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="assets/images/logo/logo.png" alt="FLOCHI">
-                <p>MARTIAN</p>
+        <div class="presale-box">
+            <h1>MDX Presale</h1>
+            <div class="price-info">
+                <p>1 $MDX = <span>$0.0206</span></p>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#tokenomics">Tokenomics</a></li>
-            </ul>
-            <div class="cta-buttons">
-                <a href="#" class="icon"><img src="assets/images/icons/telegram-icon.svg" alt="Telegram"></a>
-                <a href="#" class="icon"><img src="assets/images/icons/x-icon.svg" alt="Telegram"></a>
-                <a href="#" class="btn-buy">Buy Now</a>
+            <div class="next-stage-price">
+                <p>Next Stage Price = <span>$0.0306</span></p>
             </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="progress-bar-container">
+                <div class="progress-bar stripes animated reverse slower">
+                    <span class="progress-bar-inner">
+                    10%
+                  </span>
+                </div>
             </div>
-        </nav>
+            <div class="raised-info">
+                <p>USDT Raised: <span>$1,190,934.1 / $1,981,952</span></p>
+                <p>Tokens Sold: <span>68,326,884 / 110,000,000</span></p>
+            </div>
+            <div class="payment-methods">
+                <button class="payment-btn eth"><img src="assets/images/icons/ETH.svg"><span>ETH</span></button>
+                <button class="payment-btn usdt"><img src="assets/images/icons/usdt.svg"><span>USDT</span></button>
+                <button class="payment-btn card"><img src="assets/images/icons/card.svg"><span>CARD</span></button>
+            </div>
+            <div class="input-section">
+                <div>
+                    <label for="eth-amount">ETH you pay<span class="max-balance">MAX</span></label>
+                    <div class="amount-input">
+                        <input type="number" id="eth-amount" placeholder="0">
+                        <img src="assets/images/icons/ETH.svg">
+                    </div>
 
-        <p class="h1-outline">MARTIAN</p>
-        <h1 class="h1-solid">MARTIAN</h1>
+                </div>
+                <div>
+                    <label for="shibashoot-amount">$MXD you receive</label>
+                    <div class="amount-input">
+                        <input type="number" id="shibashoot-amount" placeholder="0">
+                        <img src="assets/images/icons/ETH.svg">
+                    </div>
 
-        <div id='character'>
-            <!-- 3d canvas -->
+                </div>
+            </div>
+            <button class="button-pushable" role="button">
+                <span class="button-shadow"></span>
+                <span class="button-edge"></span>
+                <span class="button-front text">
+                  Connect Wallet
+                </span>
+              </button>
+            <div class="no-wallet">
+                <a href="http://">
+                    <p>Don't have a wallet?</p>
+                </a>
+                <img src="assets/images/icons/info-icon.svg">
+            </div>
+
         </div>
 
-        <img src="assets/images/hero/ship.svg" class="space-ship">
+        <img src="assets/images/hero/bonk.svg" class="bonk">
+        <img src="assets/images/hero/floki.svg" class="floki">
+        <img src="assets/images/hero/shiba.svg" class="shiba">
+        <img src="assets/images/hero/brett.svg" class="brett">
+        <img src="assets/images/hero/doge.svg" class="doge">
+        <img src="assets/images/hero/pepe.svg" class="pepe">
 
-        <img src="assets/images/hero/asset-9.svg" class="moon-big">
-        <img src="assets/images/hero/asset-8.svg" class="moon-small">
-        <img src="assets/images/hero/asset-7.svg" class="clouds">
-        <img src="assets/images/hero/asset-6.svg" class="bg-mountains">
-        <img src="assets/images/hero/asset-5.svg" class="small-left-mountain">
-        <img src="assets/images/hero/asset-4.svg" class="small-right-mountain">
-        <img src="assets/images/hero/asset-3.svg" class="big-right-mountain">
-        <img src="assets/images/hero/asset-2.svg" class="big-left-mountain">
-        <img src="assets/images/hero/asset-1.svg" class="floor">
+        <img src="assets/images/hero/plane.svg" class="plane-img">
+        <img src="assets/images/hero/boat.svg" class="boat-img">
+        <img src="assets/images/hero/deck.svg" class="deck-img">
+        <div class="shadow-img">
+            <img src="assets/images/hero/shadows.svg">
+        </div>
+
+        <img src="assets/images/hero/water.svg" class="water-img">
+        <img src="assets/images/hero/buildings.svg" class="buildings-img">
+        <img src="assets/images/hero/bg.svg" class="bg-img">
     </div>
-
     <div class="ticker-strip">
         <div class="ticker-container">
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
+            <div class="ticker">$PEPE</div>
+            <div class="ticker">$BONK</div>
+            <div class="ticker">$DOGE</div>
+            <div class="ticker">$BRETT</div>
+            <div class="ticker">$FLOKI</div>
+            <div class="ticker">$SHIBA</div>
+            <div class="ticker">$WIF</div>
+            <div class="ticker">$POPCAT</div>
+            <div class="ticker">$DOGS</div>
+            <div class="ticker">$MEW</div>
+            <div class="ticker">$BABYDOGE</div>
             <!-- Duplicate -->
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
-            <div class="ticker">MARTIAN</div>
+            <div class="ticker">$PEPE</div>
+            <div class="ticker">$BONK</div>
+            <div class="ticker">$DOGE</div>
+            <div class="ticker">$BRETT</div>
+            <div class="ticker">$FLOKI</div>
+            <div class="ticker">$SHIBA</div>
+            <div class="ticker">$WIF</div>
+            <div class="ticker">$POPCAT</div>
+            <div class="ticker">$DOGS</div>
+            <div class="ticker">$MEW</div>
+            <div class="ticker">$BABYDOGE</div>
         </div>
     </div>
-
     <div class="about" id="about">
         <div class="about-text">
-            <h2>About $MARTIAN</h2>
-            <p>Welcome to the world of Martian, the meme coin that's out of this world! 🚀<br><br>Born from the depths
-                of internet humor and fueled by community spirit, Martian is more than just a cryptocurrency—it's a
-                movement.<br><br>Whether you're here for the memes, the moonshots, or just to be part of a community
-                that's as wild and unpredictable as space itself, Martian is your ticket to the stars.<br><br>Join us as
-                we take this intergalactic journey together, where the only limit is your imagination (and maybe a few
-                zero-gravity memes).</p>
-                <img src="/assets/images/about/buy-btn.svg">
+            <h2>About Meme Index</h2>
+            <p>Get ready to dive into the wildest, wackiest world of meme coins, all wrapped up into one unstoppable cryptocurrency—Meme Index! 🚀<br><br> Born from the chaos of internet culture and powered by the most legendary memes, Meme Index isn't just
+                a coin—it's a full-blown meme movement. We're here to represent every meme coin on the market, giving you a front-row seat to the laughter, moonshots, and viral fun that make meme coins unforgettable. <br> Whether you're here to ride the
+                meme waves or become part of a community that's as unpredictable as your favorite internet jokes, Meme Index is your all-access pass to the meme coin universe. 🌍 <br><br> Ready to meme your way to the moon and beyond? Let’s take this
+                adventure together—because in the world of memes, anything can happen (and usually does).</p>
         </div>
         <div class="about-image">
-            <img src="assets/images/about/astronaut.png">
+            <dotlottie-player autoplay loop mode="normal" src="assets\lottie\about.lottie" style="position: relative; z-index: 2;"></dotlottie-player>
+            <img src="assets/images/about/scroll.svg">
         </div>
-        <canvas id="deepspace">
-        </canvas>
     </div>
-
     <div class="buy">
         <h2>HOW TO BUY</h2>
         <img src="assets/images/buy/flare.svg" class="flare">
         <img src="assets/images/buy/steps.svg" class="steps-img">
         <img src="assets/images/buy/top.svg" class="top-img">
     </div>
+    <div class="featured-in">
+        <div>
+            <img src="assets/images/featured/citypaper.svg">
+            <img src="assets/images/featured/coincodex.svg">
+            <img src="assets/images/featured/the-bit-time.svg">
+            <img src="assets/images/featured/the-coin-republic.svg">
+            <img src="assets/images/featured/times-india.svg">
+            <img src="assets/images/featured/watcher.svg">
 
+            <img src="assets/images/featured/citypaper.svg">
+            <img src="assets/images/featured/coincodex.svg">
+            <img src="assets/images/featured/the-bit-time.svg">
+            <img src="assets/images/featured/the-coin-republic.svg">
+            <img src="assets/images/featured/times-india.svg">
+            <img src="assets/images/featured/watcher.svg">
+        </div>
+
+    </div>
     <div class="tokenomics" id="tokenomics">
         <div class="image">
             <img src="assets/images/tokenomics/coins.svg" alt="">
@@ -128,7 +204,7 @@
                     <p>Token Name</p>
                     <div class="box-outline">
                         <div class="code-box">
-                            <span class="code-text">Martian</span>
+                            <span class="code-text">Meme Index</span>
                             <img src="assets/images/tokenomics/copy.svg" onclick="copyToClipboard(this)" class="copy-img">
                             <div class="hover-text">Copied</div>
                         </div>
@@ -138,7 +214,7 @@
                     <p>Token Symbol</p>
                     <div class="box-outline">
                         <div class="code-box">
-                            <span class="code-text">$Martian</span>
+                            <span class="code-text">$MDX</span>
                             <img src="assets/images/tokenomics/copy.svg" onclick="copyToClipboard(this)">
                             <div class="hover-text">Copied</div>
                         </div>
@@ -156,74 +232,32 @@
                 </div>
             </div>
         </div>
-        <img src="assets/images/tokenomics/border.svg" class="border" style="top: 1%;">
     </div>
-
-    <div class="featured-strips">
-        <h2>Featured in</h2>
-        <div class="featured-strip">
-            <div class="featured-container">
-                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
-                <!-- Duplicate the items to ensure a seamless loop -->
-                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
-            </div>
-        </div>
-        <div class="featured-strip two">
-            <div class="featured-container">
-                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
-                <!-- Duplicate the items to ensure a seamless loop -->
-                <img class="featured" src="assets/images/featured/Asset 1.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 2.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 3.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 4.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 5.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 6.svg"></img>
-                <img class="featured" src="assets/images/featured/Asset 7.png"></img>
-            </div>
-        </div>
-        <img src="assets/images/featured/bottom.svg" class="bottom-img">
-    </div>
-
     <div class="footer">
-        <img src="assets/images/footer/cloud-left.svg" class="cloud-right">
-        <img src="assets/images/footer/cloud-right.svg" class="cloud-left">
-        <img src="assets/images/footer/planet.svg" class="planet">
         <div class="text">
             <h2>Socials</h2>
-            <p class="tagline">Join the $MARTIAN community.</p>
+            <p class="tagline">Join the Meme Index community.</p>
             <div class="social-btns">
                 <div class="social-btn"><img src="assets/images/icons/telegram-icon.svg" alt=""></div>
                 <div class="social-btn"><img src="assets/images/icons/x-icon.svg" alt=""></div>
                 <div class="social-btn"><img src="assets/images/icons/instagram.svg" alt=""></div>
             </div>
-
         </div>
-        <img src="assets/images/footer/monkey.png" class="footer-image">
+        <img src="assets/images/footer/handle.svg" class="handle">
+        <img src="assets/images/footer/character-1.svg" class="character-1">
+        <img src="assets/images/footer/character-2.svg" class="character-2">
+        <img src="assets/images/footer/character-3.svg" class="character-3">
     </div>
-
 
 </body>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/hero-anim.js"></script>
-<script src="assets/js/3d.js" type="module"></script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
 
 </html>

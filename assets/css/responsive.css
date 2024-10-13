@@ -1,500 +1,372 @@
 @charset "UTF-8";
 
 /* Made By - https://kleverroi.com */
+
+
 /* originally authored by Talha Shaheen - https://klever-talha.github.io */
+
+
 /* Copyright (c) 2024 Klever ROI  */
 
-
-@media (max-aspect-ratio: 3.5/1) {
-    .hero {
-        height: 100vh;
+@media (min-aspect-ratio: 2/1) and (max-aspect-ratio: 3/1) {
+    /* Notice stripe -----------------------------------> */
+    .notice p {
+        font-size: 20px;
     }
-    canvas:nth-child(1) {
-        width: 60%;
+    /* Navbar -----------------------------------> */
+    .navbar {
+        border-radius: 20px;
+        padding: 10px 20px;
+        width: 80%;
+        margin-top: 30px;
     }
-    .ticker{
-        width: 300px;
-        font-size: 45px;
-    }
-    .nav-links{
+    .nav-links {
         gap: 42px;
     }
-    .nav-links li a{
-        font-size: 28px;
+    .nav-links li a {
+        font-size: 24px;
     }
-    .btn-buy{
-        font-size: 28px;
+    .btn-buy {
+        font-size: 24px;
+        padding: 12px 32px;
     }
-    .logo img{
+    .logo img {
         width: 70px;
+        margin-right: 20px;
     }
-    .logo{
+    .logo {
         font-size: 28px;
+    }
+    .btn-buy {
+        border-radius: 14px;
     }
     .cta-buttons .icon img {
-        width: 42px;
+        width: 45px;
     }
-    .about-text{
-        width: 50%;
+    .cta-buttons {
+        gap: 20px;
     }
-    .buy{
-        padding: 160px 0;
+    /* Hero Section -----------------------------------> */
+    .hero-section {
+        height: 1000px;
     }
-    .tokenomics .info-blocks{
-        gap: 30px;
+    .presale-box {
+        padding: 40px;
+        border-radius: 18px;
+        width: 550px;
+        top: 70%;
+        right: 10%;
+        transform: translateY(-70%);
     }
-    .token-info p{
-        font-size: 1.4vw;
+    h1 {
+        font-size: 58px;
+        margin-bottom: 25px;
+        line-height: 58px;
     }
-    .code-box img{
-        height: 35px;
+    .progress-bar {
+        height: 28px;
+        margin: 25px auto;
     }
-    .featured-strips {
-    padding: 30px 0 250px 0;
+    .progress-bar-inner {
+        font-size: 23px;
     }
-    .featured {
-        height: 50px;
+    .raised-info p,
+    .price-info p,
+    .no-wallet,
+    .next-stage-price {
+        font-size: 22px;
+        margin-bottom: 8px;
     }
-    .featured-strips > h2{
-        margin-bottom: 80px;
+    .payment-methods {
+        margin: 20px;
     }
-    .cloud-left{
-        width: 30vw;
+    .payment-btn {
+        padding: 14px;
+        border: #555 3px solid;
+        border-radius: 10px;
+        font-size: 20px;
     }
-    .cloud-right{
-        width: 15vw;
+    .payment-btn>span {
+        margin-left: 12px;
     }
-    .social-btn{
+    .payment-btn>img {
+        height: 30px;
+    }
+    .input-section {
+        margin-bottom: 20px;
+    }
+    .amount-input {
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 12px;
+    }
+    input {
+        width: 100%;
+        padding: 10px 80px 10px 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 20px;
+    }
+    .button-pushable {
+        outline-offset: 8px;
+    }
+    .button-shadow {
+        border-radius: 15px;
+        transform: translateY(4px);
+    }
+    .button-edge {
+        border-radius: 15px;
+    }
+    .button-front {
+        padding: 14px 30px;
+        border-radius: 15px;
+        font-size: 1.8rem;
+    }
+    .no-wallet>img {
+        margin-left: 10px;
+        width: 25px;
+    }
+    .no-wallet {
+        font-size: 22px;
+    }
+    .deck-img {
+        width: 2600px;
+    }
+    .water-img {
+        bottom: -2%;
+        height: 400px;
+    }
+    .buildings-img {
+        width: 2600px;
+        bottom: 10%;
+    }
+    @keyframes buildings-apear {
+        0% {
+            bottom: -10%;
+        }
+        100% {
+            bottom: 27%;
+        }
+    }
+    .shadow-img {
+        bottom: -35.8%;
+        width: 922px;
+    }
+    .plane-img {
+        width: 110px;
+    }
+    .boat-img {
+        bottom: 27%;
+        width: 300px;
+    }
+    .pepe {
+        width: 350px;
+        left: 40%;
+    }
+    .doge {
+        width: 350px;
+        left: 5%;
+    }
+    .brett {
+        width: 283px;
+        left: 18%;
+    }
+    .floki {
+        width: 400px;
+        left: 22%;
+    }
+    .shiba {
+        width: 400px;
+        left: 25%;
+    }
+    .bonk {
+        width: 400px;
+        left: 14%;
+    }
+    /* Ticker strip -----------------------------------> */
+    /* Navbar -----------------------------------> */
+    /* about section -----------------------------------> */
+    .about {
+        height: 900px;
+    }
+    dotlottie-player {
+        width: 1500px;
+    }
+    /* how to buy -----------------------------------> */
+    /* tokenomics -----------------------------------> */
+    /* footer -----------------------------------> */
+    .footer .text h2 {
+        border-radius: 16px;
+        margin-bottom: 15px;
+    }
+    .social-btn {
+        border-radius: 13px;
         width: 80px;
         height: 80px;
     }
-}
-
-@media (max-aspect-ratio: 2.5/1) {
-    .hero {
-        height: 80vh;
+    .footer .tagline {
+        border-radius: 12px;
     }
-
-    .clouds {
-        left: 10%;
+    .character-1 {
+        top: -12%;
+        left: 56%;
+        width: 456px;
     }
-
-    canvas:nth-child(1) {
-        width: 70%;
+    .character-2 {
+        top: -25%;
+        right: 1%;
+        width: 461px;
     }
-    .ticker{
-        width: 250px;
-        font-size: 35px;
+    .character-3 {
+        bottom: 0;
+        left: 34%;
+        width: 451px;
     }
-    .nav-links{
-        gap: 20px;
+    .handle {
+        width: 216px;
     }
-    .nav-links li a{
-        font-size: 18px;
-    }
-    .btn-buy{
-        font-size: 18px;
-    }
-    .logo img{
-        width: 50px;
-    }
-    .logo{
-        font-size: 18px;
-    }
-    .cta-buttons .icon img {
-        width: 30px;
-    }
-    .buy{
-        padding: 80px 0;
-    }
-    .tokenomics .info-blocks{
-        gap: 20px;
-    }
-    .token-info p{
-        font-size: 1.6vw;
-    }
-    .code-box img{
-        height: 25px;
-    }
-    .cloud-left{
-        width: 35vw;
-    }
-    .cloud-right{
-        width: 20vw;
-    }
-    .social-btn{
-        width: 60px;
-        height: 60px;
-    }
-    .footer .text h2{
-        font-size: 6vw;
-    }
-    .footer .tagline{
-        font-size: 1.8vw;
-    }
-}
-
-@media (max-aspect-ratio: 1.5/1) {
-    .hero {
-        height: 75vh;
-    }
-
-    .big-right-mountain {
-        right: -10%;
-    }
-
-    .clouds {
-        left: 10%;
-    }
-
-    .moon-big {
-        top: 2%;
-    }
-    canvas:nth-child(1) {
-        width: 75%;
-    }
-    .ticker{
-        width: 200px;
-        font-size: 30px;
-    }
-    .nav-links{
-        gap: 20px;
-    }
-    .nav-links li a{
-        font-size: 18px;
-    }
-    .btn-buy{
-        font-size: 18px;
-    }
-    .logo img{
-        width: 50px;
-    }
-    .logo{
-        font-size: 18px;
-    }
-    .cta-buttons .icon img {
-        width: 30px;
-    }
-    .top-img{
-        top: -1%;
-    }
-    .token-info p{
-        font-size: 2vw;
-    }
-    .text>h2{
-        font-size: 6.5vw;
-    }
-    .code-box{
-        font-size: 2.2vw;
-    }
-    .code-box:last-child>span{
-        max-width: 30vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .tokenomics .text{
-        width: 50%;
-    }
-    .tokenomics .image{
-        width: 30%;
-    }
-    .featured-strips > h2{
-        font-size: 6.5vw;
-    }
-    .featured-strips {
-        padding: 30px 0 150px 0;
-    }
-    .featured {
-        height: 35px;
-    }
-    .cloud-left{
-        width: 60vw;
-    }
-    .cloud-right{
-        width: 30vw;
-    }
-    .social-btn{
-        width: 60px;
-        height: 60px;
-    }
-    .footer .text h2{
-        font-size: 7vw;
-    }
-    .footer .tagline{
-        font-size: 2vw;
-    }
-    
 }
 
 @media (max-aspect-ratio: 1/1) {
-    .hero {
-        height: 68vh;
+    .about {
+        height: 400px;
     }
-    .space-ship.animate{
-        animation: space-ship-2 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
+    dotlottie-player {
+        width: 600px;
     }
-
-    .big-right-mountain {
-        right: -28%;
-    }
-
-    .clouds {
-        left: 10%;
-    }
-
-    .moon-big {
-        top: 2%;
-    }
-
-    .big-left-mountain {
-        width: 50%;
-    }
-
-    .small-right-mountain {
-        width: 40%;
-    }
-
-    .small-left-mountain {
-        width: 30%;
-    }
-    canvas:nth-child(1) {
-        width: 90%;
-    }
-    h2{
+    h2 {
         font-size: 10vw;
         text-align: center;
     }
-    .about-text{
+    .about-text {
         width: 80%;
         text-align: center;
     }
-    .about-text p{
+    .about-text p {
         font-size: 3vw;
     }
-    .about-image{
+    .about-image {
         width: 80%;
     }
-    .top-img{
+    .top-img {
         top: -1%;
     }
-    .buy h2{
+    .buy h2 {
         font-size: 11vw;
         margin: 50px 0;
     }
-    .featured-strips > h2{
-        font-size: 6.5vw;
+    .character-1 {
+        top: auto;
+        bottom: 0;
+        left: 47%;
+        width: 350px;
+        z-index: 4;
     }
-    .featured-strips > h2{
-        font-size: 10vw;
+    .character-3 {
+        bottom: 0;
+        left: 30%;
+        width: 350px;
+        display: none;
     }
-    .featured {
-        height: 40px;
+    .footer .text h2 {
+        border-radius: 16px;
+        margin-bottom: 15px;
+        padding: 0px 15px 0px 20px;
     }
-
-
-}
-
-@media (max-aspect-ratio: 1/1.5) {
-    .hero {
-        height: 58vh;
+    .social-btn {
+        border-radius: 13px;
+        width: 80px;
+        height: 80px;
     }
-
-    .big-right-mountain {
-        right: -50%;
-        height: 100%;
+    .footer .tagline {
+        border-radius: 12px;
+        padding: 0px 15px 0px 20px;
+        font-size: 1.5vw;
     }
-
-    .bg-mountains {
-        bottom: 20%;
-    }
-
-    .clouds {
-        left: -40%;
-        height: 40%;
-    }
-
-    .moon-small {
-        width: 15%;
-        top: 28%;
-        right: 6%;
-    }
-
-    .moon-big {
-        width: 26%;
-        top: 5%;
-        left: 4%;
-    }
-
-    .big-left-mountain {
-        width: 75%;
-        bottom: 18%;
-    }
-
-    .small-right-mountain {
-        width: 45%;
-        right: 0%;
-    }
-
-    .small-left-mountain {
-        width: 40%;
-        bottom: 12%;
-    }
-    .space-ship.animate{
-        animation: space-ship-3 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
-    }
-    canvas:nth-child(1) {
-        width: 130%;
-    }
-    .ticker{
-        width: 160px;
-        font-size: 25px;
-    }
-    h2{
-        font-size: 12vw;
-        text-align: center;
-    }
-    .about-text p{
-        font-size: 4vw;
-    }
-    .buy h2{
-        font-size: 12vw;
-        margin: 30px 0;
-    }
-    .featured-strip{
-        transform: rotate(12deg);
-    }
-    .featured {
-        height: 25px;
-    }
-    
-}
-
-@media (max-aspect-ratio: 1/1.75) {
-    .hero {
-        height: 55vh;
-    }
-
-    .big-right-mountain {
-        right: -40%;
-        height: 80%;
-    }
-
-    .bg-mountains {
-        bottom: 20%;
-    }
-
-    .clouds {
-        left: -40%;
-        height: 40%;
-    }
-
-    .moon-small {
-        width: 15%;
-        top: 28%;
-        right: 4%;
-    }
-
-    .moon-big {
-        width: 25%;
-        top: 5%;
-        left: 3%;
-    }
-
-    .big-left-mountain {
-        width: 75%;
-        bottom: 18%;
-    }
-
-    .small-right-mountain {
-        width: 40%;
-        right: 0%;
-    }
-
-    .small-left-mountain {
-        width: 45%;
-        bottom: 12%;
-    }
-    .space-ship.animate{
-        animation: space-ship-4 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
-    }
-    canvas:nth-child(1) {
-        width: 140%;
-    }
-    .buy h2{
-        font-size: 12vw;
-        margin: 30px 0;
-    }
-    .featured-strip{
-        transform: rotate(13deg);
-    }
-    .featured {
-        height: 20px;
-    }
-
-}
-
-@media (max-aspect-ratio: 1/2.5) {
-    .hero {
-        height: 55vh;
-    }
-
-    .big-right-mountain {
-        right: -45%;
-        height: 80%;
-    }
-
-    .bg-mountains {
-        bottom: 20%;
-    }
-
-    .clouds {
-        left: -80%;
-        height: 40%;
-    }
-
-    .moon-small {
-        width: 15%;
-        top: 28%;
-        right: 4%;
-    }
-
-    .moon-big {
-        width: 35%;
-        top: 5%;
-        left: 3%;
-    }
-
-    .big-left-mountain {
-        width: 80%;
-        bottom: 18%;
-    }
-
-    .small-right-mountain {
-        width: 50%;
-        right: 0%;
-    }
-
-    .small-left-mountain {
-        width: 45%;
-        bottom: 12%;
-    }
-    .space-ship.animate{
-        animation: space-ship-5 1s ease 2.5s forwards, space-ship-gone 1s ease 6s forwards;
-    }
-    canvas:nth-child(1) {
-        width: 160%;
-    }
-    .buy{
-        padding: 50px 0;
-    }
-    .featured {
-        height: 20px;
-    }
-
-
 }
 
 @media (max-width: 788px) {
+    .h1-outline {
+        font-size: 17vw;
+    }
+    .h1-solid {
+        font-size: 17vw;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about-text {
+        margin-bottom: 20px;
+    }
+    .about-image {
+        margin-top: 20px;
+    }
+    .buy .steps-img {
+        width: 90%;
+    }
+    .tokenomics {
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0 180px 0;
+    }
+    .text>h2 {
+        font-size: 12vw;
+    }
+    .tokenomics .text {
+        width: 80%;
+    }
+    .tokenomics .image {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .tokenomics .image img {
+        width: 80%;
+    }
+    .info-blocks {
+        justify-content: center;
+    }
+    .code-box {
+        font-size: 7vw;
+    }
+    .token-info {
+        max-width: 80vw;
+    }
+    .token-info p {
+        font-size: 6vw;
+        text-align: center;
+    }
+    .code-box:last-child>span {
+        max-width: 50vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .featured-strips>h2 {
+        margin-bottom: 65px;
+    }
+    .featured-strips>h2 {
+        font-size: 12vw;
+    }
+    .featured-strips {
+        padding: 30px 0 70px 0;
+    }
+    .cloud-left {
+        width: 70vw;
+    }
+    .cloud-right {
+        width: 50vw;
+    }
+    .social-btn {
+        width: 40px;
+        height: 40px;
+        box-shadow: 2px 2px 0px 0px #000000;
+    }
+    /* Notice stripe -----------------------------------> */
+    .notice p {
+        font-size: 8px;
+    }
+    /* Navbar -----------------------------------> */
     .navbar {
         width: 90%;
     }
@@ -514,120 +386,115 @@
         max-height: 0px;
         overflow: hidden;
     }
-
     .nav-links.active {
         display: flex;
         max-height: 500px;
         padding: 20px 20px;
     }
-
     .cta-buttons {
         display: none;
     }
-
     .hamburger {
         display: flex;
         margin-right: 21px;
     }
-
-    .h1-outline {
-        font-size: 17vw;
+    /* Hero Section -----------------------------------> */
+    .hero-section {
+        height: 900px;
     }
-
-    .h1-solid {
-        font-size: 17vw;
+    .presale-box {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 90%;
+        max-width: 450px;
+        border-radius: 16px;
     }
-    .about{
+    h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        line-height: 50px;
+        letter-spacing: 0px;
+    }
+    .plane-img {
+        top: 13%;
+    }
+    .pepe {
+        left: 61%;
+    }
+    .doge {
+        left: -32%;
+    }
+    .brett {
+        left: 5%;
+    }
+    .floki {
+        left: 45%;
+    }
+    .shiba {
+        left: 11%;
+    }
+    .bonk {
+        left: -25%;
+    }
+    .boat-img {
+        bottom: 33%;
+    }
+    .about {
         flex-direction: column;
     }
-    .about-text{
+    .about-text {
         margin-bottom: 20px;
     }
-    .about-image{
+    .about-image {
         margin-top: 20px;
     }
-    .buy .steps-img{
-        width: 90%;
+    /* about section -----------------------------------> */
+    .about {
+        height: 900px;
     }
-    .tokenomics{
-        flex-direction: column;
-        align-items: center;
+    dotlottie-player {
+        width: 600px;
     }
-    .text>h2{
-        font-size: 12vw;
-    }
-    .tokenomics .text{
-        width: 80%;
-    }
-    .tokenomics .image{
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-    .tokenomics .image img{
-        width: 80%;
-    }
-    .info-blocks{
-        justify-content: center;
-    }
-    .code-box{
-        font-size: 7vw;
-    }
-    .token-info{
-        max-width: 80vw;
-    }
-    .token-info p{
-        font-size: 6vw;
-        text-align: center;
-    }
-    .code-box:last-child>span{
-        max-width: 50vw;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .featured-strips > h2{
-        margin-bottom: 65px;
-    }
-    .featured-strips > h2{
-        font-size: 12vw;
-    }
-    .featured-strips {
-        padding: 30px 0 70px 0;
-    }
-    .cloud-left{
-        width: 70vw;
-    }
-    .cloud-right{
-        width: 50vw;
-    }
-    .social-btn{
-        width: 40px;
-        height: 40px;
-        box-shadow: 2px 2px 0px 0px #000000;
-    }
-    .footer{
+    .footer {
         height: 30vh;
     }
-    .footer .text h2{
+    .footer .text h2 {
         font-size: 12vw;
         text-align: left;
     }
-    .footer .tagline{
+    .footer .tagline {
         font-size: 3vw;
+        border-radius: 6px;
     }
-    .footer .text{
-        width: 80%;
+    .footer .text {
+        width: 70%;
     }
-    .footer .image{
+    .footer .image {
         width: 30%;
     }
-    .about-text img{
+    .about-text img {
         width: 60%;
     }
-    .footer-image{
+    .footer-image {
         left: 55%;
     }
-
-
+    .character-1 {
+        display: none;
+    }
+    .character-2 {
+        top: -55%;
+        right: 1%;
+        width: 300px;
+    }
+    .footer .text h2 {
+        border-radius: 16px;
+        margin-bottom: 15px;
+        padding: 0px 15px 0px 20px;
+    }
+    .social-btn {
+        border-radius: 13px;
+        width: 50px;
+        height: 50px;
+    }
 }
