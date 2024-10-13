@@ -243,7 +243,7 @@
         text-align: center;
     }
     .about-text p {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
     .about-image {
         width: 80%;
@@ -297,6 +297,7 @@
     }
     .about-text {
         margin-bottom: 20px;
+        padding: 0;
     }
     .about-image {
         margin-top: 20px;
@@ -364,7 +365,7 @@
     }
     /* Notice stripe -----------------------------------> */
     .notice p {
-        font-size: 8px;
+        font-size: 14px;
     }
     /* Navbar -----------------------------------> */
     .navbar {
