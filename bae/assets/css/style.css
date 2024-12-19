@@ -1073,7 +1073,7 @@ h3 {
         transition: max-height 0.5s ease, padding 0.5s ease;
         max-height: 0px;
         overflow: hidden;
-        z-index: 8;
+        z-index: -1;
     }
     .logo img {
         width: 6vw;
@@ -1227,6 +1227,7 @@ h3 {
     }
     .featured-strips {
         padding: 30px 0 30px 0;
+        width: 120%;
     }
     .featured-strip.two {
         transform: rotate(-15deg) translateY(-100%);
