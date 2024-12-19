@@ -22,32 +22,32 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: morsa;
-    src: url("./fonts/morsa.otf");
+    src: url("../fonts/morsa.otf");
 }
 
 @font-face {
     font-family: marvin;
-    src: url("./fonts/marvin.otf");
+    src: url("../fonts/marvin.otf");
 }
 
 @font-face {
     font-family: poppins-bold;
-    src: url("./fonts/poppins-bold.ttf");
+    src: url("../fonts/poppins-bold.ttf");
 }
 
 @font-face {
     font-family: poppins-regular;
-    src: url("./fonts/poppins-regular.ttf");
+    src: url("../fonts/poppins-regular.ttf");
 }
 
 @font-face {
     font-family: Pacifico-Regular;
-    src: url("./fonts/pacifico-regular.ttf");
+    src: url("../fonts/pacifico-regular.ttf");
 }
 
 @font-face {
     font-family: Dopestyle;
-    src: url("./fonts/Dopestyle.ttf");
+    src: url("../fonts/Dopestyle.ttf");
 }
 
 
