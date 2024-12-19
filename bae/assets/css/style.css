@@ -1230,6 +1230,7 @@ h3 {
         width: 120%;
     }
     .featured-strip.two {
+        width: 110%;
         transform: rotate(-15deg) translateY(-100%);
     }
     .cloud-left {
