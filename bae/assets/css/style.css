@@ -22,32 +22,32 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: morsa;
-    src: url("/assets/fonts/morsa.otf");
+    src: url("assets/fonts/morsa.otf");
 }
 
 @font-face {
     font-family: marvin;
-    src: url("/assets/fonts/marvin.otf");
+    src: url("assets/fonts/marvin.otf");
 }
 
 @font-face {
     font-family: poppins-bold;
-    src: url("/assets/fonts/Poppins-Bold.ttf");
+    src: url("assets/fonts/Poppins-Bold.ttf");
 }
 
 @font-face {
     font-family: poppins-regular;
-    src: url("/assets/fonts/Poppins-Regular.ttf");
+    src: url("assets/fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
     font-family: Pacifico-Regular;
-    src: url("/assets/fonts/Pacifico-Regular.ttf");
+    src: url("assets/fonts/Pacifico-Regular.ttf");
 }
 
 @font-face {
     font-family: Dopestyle;
-    src: url("/assets/fonts/Dopestyle.ttf");
+    src: url("assets/fonts/Dopestyle.ttf");
 }
 
 
@@ -244,7 +244,7 @@ select {
 /* Hero Section -----------------------------------> */
 
 .hero {
-    background-image: url("/assets/images/hero/bg.png");
+    background-image: url("assets/images/hero/bg.png");
     height: 750px;
     background-size: cover;
     background-position: center;
@@ -778,7 +778,7 @@ h3 {
 
 .footer {
     width: 100%;
-    background-image: url("/assets/images/footer/bg.png");
+    background-image: url("assets/images/footer/bg.png");
     height: 50vh;
     background-size: cover;
     background-position: top;
