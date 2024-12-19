@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 
 @font-face {
     font-family: morsa;
-    src: url("assets/fonts/morsa.otf");
+    src: url("./fonts/morsa.otf");
 }
 
 @font-face {
