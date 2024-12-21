@@ -633,7 +633,7 @@ h3 {
 }
 
 
-/* featured stripe -----------------------------------> */
+/*  stripe -----------------------------------> */
 
 .featured-strips {
     background-color: #ff79e3;
@@ -1227,7 +1227,7 @@ h3 {
     }
     .featured-strips {
         padding: 30px 0 30px 0;
-        width: 120%;
+        width: 100%;
     }
     .featured-strip.two {
         width: 120%;
