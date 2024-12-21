@@ -655,7 +655,7 @@ h3 {
 }
 
 .featured-strip {
-    width: 110%;
+    width: 100%;
     overflow: hidden;
     background-color: #CF3A54;
     padding: 8px 0;
@@ -1227,7 +1227,7 @@ h3 {
     }
     .featured-strips {
         padding: 30px 0 30px 0;
-        width: 120%;
+        width: 100%;
     }
     .featured-strip.two {
         width: 110%;
