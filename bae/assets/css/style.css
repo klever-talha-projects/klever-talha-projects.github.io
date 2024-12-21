@@ -1227,10 +1227,10 @@ h3 {
     }
     .featured-strips {
         padding: 30px 0 30px 0;
-        width: 100%;
+        width: 120%;
     }
     .featured-strip.two {
-        width: 110%;
+        width: 120%;
         transform: rotate(-15deg) translateY(-100%);
     }
     .cloud-left {
