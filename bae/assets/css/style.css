@@ -1229,6 +1229,9 @@ h3 {
         padding: 30px 0 30px 0;
         width: 100%;
     }
+    .featured-strip{
+        width:12%;
+    }
     .featured-strip.two {
         width: 120%;
         transform: rotate(-15deg) translateY(-100%);
