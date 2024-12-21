@@ -1009,7 +1009,7 @@ h3 {
     .character-3 {
         bottom: 100%;
         width: 450px;
-        right: -12%;
+        right: -;
     }
     .character-4 {
         bottom: 100%;
@@ -1230,7 +1230,7 @@ h3 {
         width: 100%;
     }
     .featured-strip{
-        width:12%;
+        width:120%;
     }
     .featured-strip.two {
         width: 120%;
