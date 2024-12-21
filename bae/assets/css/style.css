@@ -768,7 +768,7 @@ h3 {
     .accordion {
         align-items: flex-start;
     }
-    .icon {
+    .faq .icon {
         align-self: flex-end;
     }
 }
