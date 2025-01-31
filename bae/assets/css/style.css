@@ -1251,6 +1251,10 @@ h3 {
     .ca-box {
         font-size: 7vw;
     }
+        .cta-hero {
+        width: 210px;
+        bottom: 11%;
+    }
     .character-1 {
         width: 500px;
         right: -20%;
@@ -1349,7 +1353,7 @@ h3 {
         padding: 100px 0 220px 0;
     }
     .tokenomics-img {
-        width: 90vw;
+        width: 98vw;
         bottom: 2%;
     }
     .text>h2 {
@@ -1366,6 +1370,9 @@ h3 {
     }
     .tokenomics .image img {
         width: 80%;
+    }
+    .faq{
+        padding: 25px 0 100px 0;
     }
     .container {
         width: 88%;
