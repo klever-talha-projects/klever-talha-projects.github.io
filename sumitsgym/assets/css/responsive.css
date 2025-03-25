@@ -3684,9 +3684,7 @@ header.header-style-one.three:before {
     .certificates .c-slider .c-main .c-first {
         width: 60%;
     }
-    .contact-us .c-cards .card ul li span {
-        width: 30%;
-    }
+    .contact-us .c-cards .card ul li span {}
     .core-features .video:before {
         width: 120px;
     }
